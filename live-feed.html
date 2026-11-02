@@ -8,6 +8,278 @@
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
 </head>
 <body>
-    
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg" alt="">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="button-green public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="how-it-works.html">How it works</a>
+        </div>
+        <div class="nav-button">
+            <a class="button-transparent public-sans" href="#"><img src="icons/i-log-in.svg" alt="">Sign In</a>
+            <a class="button-green public-sans" href="#"><img src="icons/i-plus.svg" alt="">Report</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="hero">
+            <span class="hero-uptext-pages ibm-plex-mono">PUBLIC INCIDENT REGISTRY</span>
+            <span class="hero-text-pages fraunces">Community Reports & Fixes</span>
+            <div class="hero-subtext-map">
+                <span class="hero-subtext-pages public-sans">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</span>
+                <div class="hero-feed-map">
+                    <div class="hero-map public-sans"><div class="hero-feed public-sans"><img src="icons/i-list.svg" alt="">Feed</div><img src="icons/i-map.svg" alt="">Map</div>
+                </div>
+            </div>
+            <div class="input-search">
+                <img src="icons/i-search-gray.svg" alt="">
+                <input class="public-sans" type="text" placeholder="Search by street name, complaint ID, or keyword...">
+            </div>
+            <div class="filter">
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" checked hidden>
+                    All Issues (6)
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-warning.svg" alt="">
+                    Roads & Transit
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-water.svg" alt="">
+                    Water & Sewage
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-lighting.svg" alt="">
+                    Street Lighting
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-trashbin.svg" alt="">
+                    Sanitation & Waste
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-tree.svg" alt="">
+                    Public Parks & Trees
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-speaker.svg" alt="">
+                    Noise & Disturbance
+                </label>
+                <label class="public-sans button-white">
+                    <input type="radio" name="category" hidden>
+                    <img src="icons/i-building.svg" alt="">
+                    Building & Zoning
+                </label>
+            </div>
+            <div class="status-proof">
+                <div class="status">
+                    <span class="ibm-plex-mono status-text">STATUS:&nbsp;</span>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" checked hidden>
+                        All
+                    </label>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Submitted
+                    </label>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Received
+                    </label>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        In review
+                    </label>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Assigned
+                    </label>
+                    <label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Awaiting your info
+                    </label><label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Resolved
+                    </label><label class="public-sans button-white">
+                        <input type="radio" name="status" hidden>
+                        Closed
+                    </label>
+                </div>
+                <label class="proof public-sans">
+                    <input type="checkbox">With photos/proof only
+                </label>
+            </div>
+        </div>
+        <article class="article-live-feed">
+            <div class="articles-live-feed">
+                <img class="articles-img" src="images/article-1.png" alt="Article 1">
+                <div class="articles-header">
+                    <span class="articles-status status-inreview public-sans"><img src="icons/i-search.svg" alt="">In review</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8841</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Perumda PAM JAYA (Clean Drinking Water)</span>
+                </div>
+                <div class="articles-text public-sans">
+                    PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg" alt="">148</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">2 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 29</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)
+                    <span>·</span>
+                    <span>Water & Sewage</span>
+                </div>
+            </div>
+            <div class="articles-live-feed">
+                <img class="articles-img" src="images/article-2.png" alt="Article 2">
+                <div class="articles-header">
+                    <span class="articles-status status-assigned public-sans"><img src="icons/i-user-check.svg" alt="">Assigned</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8819</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Dinas Bina Marga DKI Jakarta (Roads & Sidewalks)</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg" alt="">92</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">1 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 28</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur TransJakarta)
+                    <span>·</span>
+                    <span>Roads & Transit</span>
+                </div>
+            </div>
+            <div class="articles-live-feed">
+                <img class="articles-img" src="images/article-3.png" alt="Article 3">
+                <div class="articles-header">
+                    <span class="articles-status status-resolved public-sans"><img src="icons/i-check-circle.svg" alt="">Resolved</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8794</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Dinas Perhubungan DKI Jakarta (PJU & Traffic)</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Complete PJU streetlight outage spanning 300 meters along residential corridor
+                    <span class="articles-likes ibm-plex-mono disabled"><img src="icons/i-thumbs-up.svg" alt="">64</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">1 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 28</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03
+                    <span>·</span>
+                    <span>Street Lighting</span>
+                </div>
+            </div>
+            <div class="articles-live-feed">
+                <img class="articles-img" src="images/article-4.png" alt="Article 4">
+                <div class="articles-header">
+                    <span class="articles-status status-inreview public-sans"><img src="icons/i-search.svg" alt="">In review</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8720</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Dinas Lingkungan Hidup DKI Jakarta (Waste & Rivers)</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg" alt="">78</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">1 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 29</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Kampung Kemang, RT 02 / RW 01 (bantaran Kali Krukut)
+                    <span>·</span>
+                    <span>Sanitation & Waste</span>
+                </div>
+            </div>
+            <div class="articles-live-feed">
+                <img class="articles-img" src="images/article-5.png" alt="Article 5">
+                <div class="articles-header">
+                    <span class="articles-status status-assigned public-sans"><img src="icons/i-user-check.svg" alt="">Assigned</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8650</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Dinas Pertamanan dan Hutan Kota DKI Jakarta</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Hazardous decayed Trembesi tree limb at risk of collapse over walking path
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg" alt="">45</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">1 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 28</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Taman Suropati (sisi timur, dekat patung ASEAN)
+                    <span>·</span>
+                    <span>Public Parks & Trees</span>
+                </div>
+            </div>
+            <div class="articles-live-feed">
+                <div class="articles-header">
+                    <span class="articles-status status-inreview public-sans articles-disabled"><img src="icons/i-clock.svg" alt="">Submitted</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8601</span>
+                    <span class="articles-code ibm-plex-mono">·</span>
+                    <span class="articles-dinas public-sans">Satpol PP Provinsi DKI Jakarta (Public Order)</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Heavy excavation equipment operating past 22:00 WIB in residential alley
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg" alt="">39</span>
+                    <span class="articles-proof ibm-plex-mono"><img src="icons/i-list-green.svg" alt="">1 proof</span>
+                    <span class="articles-date ibm-plex-mono">Oct 29</span>
+                    <span class="articles-inspect public-sans">Track<img src="icons/i-arrow-right-green.svg" alt=""></span>
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" alt="" width="12px" height="12px">Jl. Senopati No. 18, RT 06 / RW 02
+                    <span>·</span>
+                    <span>Noise & Disturbance</span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
 </body>
 </html>
