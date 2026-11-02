@@ -688,6 +688,10 @@ a:focus-visible {
     border-color: var(--border-color-gray);
 }
 
+.articles-green {
+    color: var(--font-color-green);
+}
+
 /* --------------------Footer-------------------- */
 .footer {
     display: flex;
