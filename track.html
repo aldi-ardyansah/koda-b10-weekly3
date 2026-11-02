@@ -8,6 +8,100 @@
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
 </head>
 <body>
-    
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg" alt="">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="button-green public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="how-it-works.html">How it works</a>
+        </div>
+        <div class="nav-button">
+            <a class="button-transparent public-sans" href="#"><img src="icons/i-log-in.svg" alt="">Sign In</a>
+            <a class="button-green public-sans" href="#"><img src="icons/i-plus.svg" alt="">Report</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="track">
+            <div class="track-card">
+                <span class="ibm-plex-mono track-upheading">CITIZEN PORTAL</span>
+                <span class="fraunces track-heading">Track your complaint</span>
+                <span class="public-sans track-subheading">Enter your official case reference number to view real-time triage progress, inspector assignment, and official replies.</span>
+                <form class="track-form">
+                    <span class="ibm-plex-mono track-label-input">COMPLAINT REFERENCE ID *</span>
+                    <input class="track-input ibm-plex-mono" type="text" placeholder="e.g. CMP-2026-8841">
+                    <span class="ibm-plex-mono track-label-input">EMAIL ADDRESS OR PHONE (OPTIONAL VERIFICATION)</span>
+                    <input class="track-input public-sans" type="text" placeholder="citizen@example.com">
+                    <button type="submit" class="track-button public-sans">
+                        <img src="icons/i-search-white.svg">
+                        Lookup report status
+                        <img src="icons/i-arrow-right.svg">
+                    </button>
+                </form>
+                <div class="track-footer">
+                    <span class="public-sans track-record">Try a sample record:</span>
+                    <span class="ibm-plex-mono track-code">CMP-2026-8841</span>
+                    <span class="ibm-plex-mono track-record">·</span>
+                    <span class="ibm-plex-mono track-code">CMP-2026-8794 (Resolved)</span>
+                </div>
+            </div>
+            <div class="track-sidebar">
+                <div class="track-info">
+                    <div class="track-info-icon">
+                        <img src="icons/i-help-circle.svg">
+                    </div>
+                    <div class="track-info-text">
+                        <span class="public-sans">
+                            Your tracking ID was displayed on your confirmation receipt and sent to your registered email address immediately upon intake.
+                        </span>
+                        <span class="public-sans">
+                            Reports filed anonymously can only be tracked using this unique key; officers cannot retrieve records by name without it.
+                        </span>
+                    </div>
+                </div>
+                <div class="track-lost">
+                    <a class="public-sans" href="#">Lost your tracking ID? Search recent reports by location →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
 </body>
 </html>
