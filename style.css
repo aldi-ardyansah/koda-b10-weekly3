@@ -1150,6 +1150,162 @@ a:focus-visible {
     gap: 8px;
 }
 
+/* --------------------Login-------------------- */
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(20, 35, 29, 0.58);
+}
+
+#login-toggle:not(:checked) ~ .login-overlay {
+    display: none;
+}
+
+.login-modal {
+    width: 100%;
+    max-width: 620px;
+    background-color: #fffdf8;
+    border: 1px solid #d9d0bd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.login-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 26px 20px;
+    background-color: #f3efe4;
+    border-bottom: 1px solid #e5dfd2;
+}
+
+.login-modal-header h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #172b23;
+}
+
+.login-modal-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #52645c;
+}
+
+.login-close {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    color: #52645c;
+    cursor: pointer;
+}
+
+.login-modal-body {
+    padding: 16px 20px 22px;
+}
+
+.login-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.login-tabs span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 52px;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.login-tab-active {
+    color: white;
+    background-color: #117052;
+}
+
+.login-tab-inactive {
+    color: #52645c;
+    background-color: #f3efe4;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.login-field label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #52645c;
+    letter-spacing: 1px;
+}
+
+.login-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 0 14px;
+    border: 1px solid #d9cbb4;
+    border-radius: 15px;
+    background-color: #fffdf8;
+    color: #87978e;
+}
+
+.login-input:focus-within {
+    outline: 4px solid #dce9df;
+    border-color: #117052;
+}
+
+.login-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    color: #172b23;
+}
+
+.login-input input::placeholder {
+    color: #87978e;
+}
+
+.login-eye {
+    cursor: default;
+}
+
+.login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 46px;
+    border: none;
+    border-radius: 50px;
+    background-color: #117052;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 /* --------------------Footer-------------------- */
 .footer {
     display: flex;
