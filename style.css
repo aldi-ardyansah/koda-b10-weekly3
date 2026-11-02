@@ -1150,7 +1150,7 @@ a:focus-visible {
     gap: 8px;
 }
 
-/* --------------------Login-------------------- */
+/* --------------------Sign in-------------------- */
 .login-overlay {
     position: fixed;
     inset: 0;
@@ -1168,10 +1168,10 @@ a:focus-visible {
 
 .login-modal {
     width: 100%;
-    max-width: 620px;
+    max-width: 500px;
     background-color: #fffdf8;
     border: 1px solid #d9d0bd;
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
 }
 
@@ -1179,21 +1179,21 @@ a:focus-visible {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 24px 26px 20px;
+    padding: 20px 24px 16px;
     background-color: #f3efe4;
     border-bottom: 1px solid #e5dfd2;
 }
 
 .login-modal-header h2 {
-    margin: 0 0 8px;
-    font-size: 23px;
+    margin: 0 0 6px;
+    font-size: 21px;
     font-weight: 600;
     color: #172b23;
 }
 
 .login-modal-header p {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #52645c;
 }
 
@@ -1212,19 +1212,21 @@ a:focus-visible {
 .login-tabs {
     display: flex;
     gap: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
-.login-tabs span {
+.login-tabs span,
+.login-tabs a {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
-    min-height: 52px;
+    min-height: 46px;
     padding: 8px;
     border-radius: 50px;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
+    text-decoration: none;
 }
 
 .login-tab-active {
@@ -1250,7 +1252,7 @@ a:focus-visible {
 }
 
 .login-field label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
     color: #52645c;
     letter-spacing: 1px;
@@ -1259,18 +1261,24 @@ a:focus-visible {
 .login-input {
     display: flex;
     align-items: center;
-    gap: 12px;
-    min-height: 48px;
-    padding: 0 14px;
+    gap: 10px;
+    min-height: 42px;
+    padding: 0 12px;
     border: 1px solid #d9cbb4;
-    border-radius: 15px;
+    border-radius: 12px;
     background-color: #fffdf8;
     color: #87978e;
 }
 
 .login-input:focus-within {
-    outline: 4px solid #dce9df;
+    outline: 3px solid #dce9df;
     border-color: #117052;
+}
+
+.login-input img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
 .login-input input {
@@ -1280,7 +1288,7 @@ a:focus-visible {
     outline: none;
     background: transparent;
     font-family: "Public Sans", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: #172b23;
 }
 
@@ -1288,21 +1296,185 @@ a:focus-visible {
     color: #87978e;
 }
 
-.login-eye {
-    cursor: default;
-}
-
 .login-submit {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    min-height: 46px;
+    gap: 10px;
+    min-height: 42px;
     border: none;
     border-radius: 50px;
     background-color: #117052;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* --------------------Register-------------------- */
+#register-toggle:not(:checked) ~ .login-overlay {
+    display: none;
+}
+
+.register-modal {
+    width: 100%;
+    max-width: 560px;
+    background-color: #fffdf8;
+    border: 1px solid #d9d0bd;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.register-modal .login-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    background-color: #f3efe4;
+    border-bottom: 1px solid #e5dfd2;
+}
+
+.register-modal .login-modal-header h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #172b23;
+}
+
+.register-modal .login-modal-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #52645c;
+}
+
+.register-modal .login-close {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    color: #52645c;
+    cursor: pointer;
+}
+
+.register-modal-body {
+    padding: 14px 20px 20px;
+}
+
+.register-modal .login-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.register-modal .login-tabs a,
+.register-modal .login-tabs span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 46px;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register-modal .login-tab-active {
+    color: white;
+    background-color: #117052;
+}
+
+.register-modal .login-tab-inactive {
+    color: #52645c;
+    background-color: #f3efe4;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.register-field label {
+    font-size: 10px;
+    font-weight: 500;
+    color: #52645c;
+    letter-spacing: 1px;
+}
+
+.register-field-row {
+    display: flex;
+    gap: 12px;
+}
+
+.register-field-row .register-field {
+    flex: 1;
+}
+
+.register-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border: 1px solid #d9cbb4;
+    border-radius: 12px;
+    background-color: #fffdf8;
+    color: #87978e;
+}
+
+.register-input:focus-within {
+    outline: 3px solid #dce9df;
+    border-color: #117052;
+}
+
+.register-input img {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.register-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Public Sans", sans-serif;
+    font-size: 13px;
+    color: #172b23;
+}
+
+.register-input input::placeholder {
+    color: #87978e;
+}
+
+.register-helper {
+    font-family: "Public Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #87978e;
+    line-height: 1.5;
+}
+
+.register-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 40px;
+    border: none;
+    border-radius: 50px;
+    background-color: #117052;
+    color: white;
+    font-family: "Public Sans", sans-serif;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -1580,6 +1752,117 @@ a:focus-visible {
 
     .help-emergency-button-container {
         flex-wrap: wrap;
+    }
+
+    .login-modal {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .login-modal-body {
+        padding: 14px 16px 18px;
+    }
+
+    .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .login-tabs span,
+    .login-tabs a {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .login-input {
+        min-height: 40px;
+    }
+
+    .login-input input {
+        font-size: 12px;
+    }
+
+    .login-submit {
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    .register-modal {
+        max-width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    .register-modal .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .register-modal .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .register-modal .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .register-modal-body {
+        padding: 14px;
+    }
+
+    .register-modal .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .register-modal .login-tabs a,
+    .register-modal .login-tabs span {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .register-form {
+        gap: 14px;
+    }
+
+    .register-field-row {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .register-field label {
+        font-size: 10px;
+    }
+
+    .register-input {
+        min-height: 40px;
+    }
+
+    .register-input input {
+        font-size: 12px;
+    }
+
+    .register-helper {
+        font-size: 10px;
+    }
+
+    .register-submit {
+        min-height: 40px;
+        font-size: 12px;
     }
 
     .footer {

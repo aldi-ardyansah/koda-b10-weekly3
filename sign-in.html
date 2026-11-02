@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WargaReport - Home</title>
+    <title>WargaReport - Sign in</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
 </head>
@@ -20,23 +20,33 @@
             </div>
             <div class="login-modal-body">
                 <div class="login-tabs">
-                    <span class="login-tab-active public-sans">Sign In Existing Account</span>
-                    <span class="login-tab-inactive public-sans">Register as Citizen</span>
+                    <span class="login-tab-active public-sans">
+                        Sign In Existing Account
+                    </span>
+                    <a href="register.html" class="login-tab-inactive public-sans">
+                        Register as Citizen
+                    </a>
                 </div>
                 <form class="login-form">
                     <div class="login-field">
-                        <label class="ibm-plex-mono" for="login-email">EMAIL ADDRESS</label>
+                        <label class="ibm-plex-mono" for="login-email">
+                            EMAIL ADDRESS
+                        </label>
                         <div class="login-input">
-                            <img src="icons/i-email.svg">
-                            <input type="email" id="login-email" placeholder="Enter your Email">
+                            <img src="icons/i-email.svg" alt="">
+                            <input type="email" id="login-email"
+                                placeholder="Enter your Email" required>
                         </div>
                     </div>
                     <div class="login-field">
-                        <label class="ibm-plex-mono" for="login-password">PASSWORD</label>
+                        <label class="ibm-plex-mono" for="login-password">
+                            PASSWORD
+                        </label>
                         <div class="login-input">
-                            <img src="icons/i-lock.svg">
-                            <input type="password" id="login-password" placeholder="Enter your password">
-                            <img class="login-eye" src="icons/i-eye.svg">
+                            <img src="icons/i-lock.svg" alt="">
+                            <input type="password" id="login-password"
+                                placeholder="Enter your password" required>
+                            <img class="login-eye" src="icons/i-eye.svg" alt="">
                         </div>
                     </div>
                     <button type="submit" class="login-submit public-sans">
