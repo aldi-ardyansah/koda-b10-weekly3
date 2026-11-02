@@ -5,66 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WargaReport - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
 </head>
 <body>
     <nav class="nav">
         <div class="nav-brand">
-            <img src="icons/logo.svg" alt="Logo">
-            <a class="text-brand fraunces" href="index.html">WargaReport</a>
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
         </div>
         <div class="nav-pages">
-            <a class="text-pages public-sans" href="live-feed.html">Live Feed</a>
-            <a class="text-pages public-sans" href="track.html">Track</a>
-            <a class="text-pages public-sans" href="how-it-works.html">How it works</a>
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="how-it-works.html">How it works</a>
         </div>
         <div class="nav-button">
-            <a class="btn-sm-transparent public-sans" href="#"><img src="icons/i-log-in.svg">Sign In</a>
-            <a class="btn-sm-green public-sans" href="#"><img src="icons/i-plus.svg">Report</a>
+            <a class="public-sans" href="#"><img src="icons/i-log-in.svg">Sign In</a>
+            <a class="public-sans" href="#"><img src="icons/i-plus.svg">Report</a>
         </div>
     </nav>
-    <header class="header">
-        <span class="text-header fraunces">See something broken? Snap it. We push the city to fix it.</span>
-        <p class="text-subheader public-sans">Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food delivery order, and keep authorities accountable.</p>
-        <div class="header-btn">
-            <a class="btn-green public-sans" href="#"><img src="icons/i-camera.svg">Snap a report<img src="icons/i-arrow-right.svg"></a>
-            <a class="btn-white public-sans" href="#">Track a case</a>
-        </div>
-        <div class="stats">
-            <span class="ibm-plex-mono stats-text-num-black">48</span>
-            <span class="ibm-plex-mono stats-text">reports today</span>
-            <span class="ibm-plex-mono stats-text">·</span>
-            <span class="ibm-plex-mono stats-text-num-green">194</span>
-            <span class="ibm-plex-mono stats-text">fixed this week</span>
-            <span class="ibm-plex-mono stats-text">·</span>
-            <span class="ibm-plex-mono stats-text-num-green">2.3</span>
-            <span class="ibm-plex-mono stats-text">days avg response</span>
-        </div>
-    </header>
     <main class="main">
-        <div class="section">
-            <div class="section-1">
-                <div class="section-round"><span class="section-number ibm-plex-mono">01</span></div>
-                <div class="section-text fraunces">Snap & Tag</div>
-                <div class="section-subtext public-sans">Take a photo or quick audio of the issue and provide the street location.</div>
+        <div class="hero">
+            <span class="hero-text fraunces">See something broken? Snap it. We push the city to fix it.</span>
+            <span class="hero-subtext public-sans">Potholes, dark streetlights, PAM water leaks, or trash piles. Drop photos, track fixes like a food delivery order, and keep authorities accountable.</span>
+            <div class="hero-button">
+                <a class="public-sans hero-button-green" href="#"><img src="icons/i-camera.svg">Snap a report<img src="icons/i-arrow-right.svg"></a>
+                <a class="public-sans hero-button-white" href="#">Track a case</a>
             </div>
-            <div class="section-2">
-                <div class="section-round"><span class="section-number ibm-plex-mono">02</span></div>
-                <div class="section-text fraunces">Report Review</div>
-                <div class="section-subtext public-sans">Our team verifies evidence and routes directly to the responsible bureau.</div>
-            </div>
-            <div class="section-3">
-                <div class="section-round"><span class="section-number ibm-plex-mono">03</span></div>
-                <div class="section-text fraunces">Field Fix</div>
-                <div class="section-subtext public-sans">Dispatched technicians do the repairs under strict public SLA windows.</div>
-            </div>
-            <div class="section-4">
-                <div class="section-round"><span class="section-number ibm-plex-mono">04</span></div>
-                <div class="section-text fraunces">Proof & Close</div>
-                <div class="section-subtext public-sans">Before/after photos published openly so everyone sees the resolution.</div>
+            <div class="hero-stats">
+                <span class="ibm-plex-mono hero-stats-black">48</span>
+                <span class="ibm-plex-mono hero-stats-gray">reports today</span>
+                <span class="ibm-plex-mono hero-stats-gray">·</span>
+                <span class="ibm-plex-mono hero-stats-green">194</span>
+                <span class="ibm-plex-mono hero-stats-gray">fixed this week</span>
+                <span class="ibm-plex-mono hero-stats-gray">·</span>
+                <span class="ibm-plex-mono hero-stats-green">2.3 days</span>
+                <span class="ibm-plex-mono hero-stats-gray">avg response</span>
             </div>
         </div>
+        <section class="section">
+            <div class="card">
+                <span class="card-circle ibm-plex-mono">01</span>
+                <span class="fraunces card-text">Snap & Tag</span>
+                <span class="public-sans card-subtext">Take a photo or quick audio of the issue and provide the street location.</span>
+            </div>
+            <div class="card">
+                <span class="card-circle ibm-plex-mono">02</span>
+                <span class="fraunces card-text">Report Review</span>
+                <span class="public-sans card-subtext">Our team verifies evidence and routes directly to the responsible bureau.</span>
+            </div>
+            <div class="card">
+                <span class="card-circle ibm-plex-mono">03</span>
+                <span class="fraunces card-text">Field Fix</span>
+                <span class="public-sans card-subtext">Dispatched technicians do the repairs under strict public SLA windows.</span>
+            </div>
+            <div class="card">
+                <span class="card-circle ibm-plex-mono">04</span>
+                <span class="fraunces card-text">Proof & Close</span>
+                <span class="public-sans card-subtext">Before/after photos published openly so everyone sees the resolution.</span>
+            </div>
+        </section>
+        <article class="article">
+            <div class="article-header">
+                <span class="article-header-text fraunces">Recent Community Reports</span>
+                <span class="article-header-subtext public-sans">Verified reports lodged in Jakarta and surrounding regions</span>
+                <span class="article-header-view public-sans">View live feed<br>→</span>
+            </div>
+            <div class="articles">
+                <img class="articles-img" src="images/article-1.png" alt="Article 1">
+                <div class="articles-header">
+                    <span class="articles-status status-inreview public-sans"><img src="icons/i-search.svg">In review</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8841</span>
+                </div>
+                <div class="articles-text public-sans">
+                    PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" width="12px" height="12px">Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)
+                </div>
+                <div class="articles-footer">
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg">148</span>
+                    <span class="articles-inspect public-sans">Inspect<br>→</span>    
+                </div>
+            </div>
+            <div class="articles">
+                <img class="articles-img" src="images/article-2.png" alt="Article 2">
+                <div class="articles-header">
+                    <span class="articles-status status-assigned public-sans"><img src="icons/i-user-check.svg">Assigned</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8819</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Severe 15cm asphalt cavity in TransJakarta corridor causing motorbike rim damage
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" width="12px" height="12px">Jl. Gatot Subroto Kav. 38 (depan Menara Mulia, Jalur Trans Jakarta)
+                </div>
+                <div class="articles-footer">
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg">92</span>
+                    <span class="articles-inspect public-sans">Inspect<br>→</span>    
+                </div>
+            </div>
+            <div class="articles">
+                <img class="articles-img" src="images/article-3.png" alt="Article 3">
+                <div class="articles-header">
+                    <span class="articles-status status-resolved public-sans"><img src="icons/i-check-circle.svg">Resolved</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8794</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Complete PJU streetlight outage spanning 300 meters along residential corridor
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" width="12px" height="12px">Jl. Tebet Barat Dalam Raya No. 24, RT 08 / RW 03
+                </div>
+                <div class="articles-footer">
+                    <span class="articles-likes disabled ibm-plex-mono"><img src="icons/i-thumbs-up.svg">64</span>
+                    <span class="articles-inspect public-sans">Inspect<br>→</span>    
+                </div>
+            </div>
+            <div class="articles">
+                <img class="articles-img" src="images/article-4.png" alt="Article 4">
+                <div class="articles-header">
+                    <span class="articles-status status-inreview public-sans"><img src="icons/i-search.svg">In review</span>
+                    <span class="articles-code ibm-plex-mono">CMP-2026-8720</span>
+                </div>
+                <div class="articles-text public-sans">
+                    Illegal household trash accumulation obstructing drainage at Kali Krukut Kemang
+                </div>
+                <div class="articles-location public-sans">
+                    <img src="icons/i-map-pin.svg" width="12px" height="12px">Kampung Kemang, RT 02 / RW 01 (bantaran Kali Krukut)
+                </div>
+                <div class="articles-footer">
+                    <span class="articles-likes ibm-plex-mono"><img src="icons/i-thumbs-up.svg">78</span>
+                    <span class="articles-inspect public-sans">Inspect<br>→</span> 
+                </div>
+            </div>
+        </article>
     </main>
-    <footer>
+    <footer class="footer">
 
     </footer>
 </body>
