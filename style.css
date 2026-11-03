@@ -1169,8 +1169,8 @@ a:focus-visible {
 .login-modal {
     width: 100%;
     max-width: 500px;
-    background-color: #fffdf8;
-    border: 1px solid #d9d0bd;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
     border-radius: 18px;
     overflow: hidden;
 }
@@ -1180,28 +1180,27 @@ a:focus-visible {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px 24px 16px;
-    background-color: #f3efe4;
-    border-bottom: 1px solid #e5dfd2;
+    background-color: var(--bg-color-body-card);
+    border-bottom: 1px solid var(--border-color-gray);
 }
 
 .login-modal-header h2 {
     margin: 0 0 6px;
     font-size: 21px;
     font-weight: 600;
-    color: #172b23;
+    color: var(--font-color-black);
 }
 
 .login-modal-header p {
     margin: 0;
     font-size: 13px;
-    color: #52645c;
+    color: var(--font-color-gray);
 }
 
 .login-close {
-    font-family: Arial, sans-serif;
     font-size: 25px;
     line-height: 1;
-    color: #52645c;
+    color: var(--font-color-gray);
     cursor: pointer;
 }
 
@@ -1230,13 +1229,13 @@ a:focus-visible {
 }
 
 .login-tab-active {
-    color: white;
-    background-color: #117052;
+    color: var(--bg-color-white);
+    background-color: var(--bg-color-green);
 }
 
 .login-tab-inactive {
-    color: #52645c;
-    background-color: #f3efe4;
+    color: var(--font-color-gray);
+    background-color: var(--bg-color-body-card);
 }
 
 .login-form {
@@ -1254,7 +1253,7 @@ a:focus-visible {
 .login-field label {
     font-size: 10px;
     font-weight: 500;
-    color: #52645c;
+    color: var(--font-color-gray);
     letter-spacing: 1px;
 }
 
@@ -1264,15 +1263,15 @@ a:focus-visible {
     gap: 10px;
     min-height: 42px;
     padding: 0 12px;
-    border: 1px solid #d9cbb4;
+    border: 1px solid var(--border-color-gray);
     border-radius: 12px;
-    background-color: #fffdf8;
-    color: #87978e;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-gray-light);
 }
 
 .login-input:focus-within {
-    outline: 3px solid #dce9df;
-    border-color: #117052;
+    outline: 3px solid var(--border-color-green-light);
+    border-color: var(--border-color-green);
 }
 
 .login-input img {
@@ -1287,13 +1286,12 @@ a:focus-visible {
     border: none;
     outline: none;
     background: transparent;
-    font-family: "Public Sans", sans-serif;
     font-size: 13px;
-    color: #172b23;
+    color: var(--font-color-gray);
 }
 
 .login-input input::placeholder {
-    color: #87978e;
+    color: var(--font-color-gray-light);
 }
 
 .login-submit {
@@ -1304,8 +1302,8 @@ a:focus-visible {
     min-height: 42px;
     border: none;
     border-radius: 50px;
-    background-color: #117052;
-    color: white;
+    background-color: var(--bg-color-green);
+    color: var(--font-color-white);
     font-size: 14px;
     cursor: pointer;
 }
@@ -1318,8 +1316,8 @@ a:focus-visible {
 .register-modal {
     width: 100%;
     max-width: 560px;
-    background-color: #fffdf8;
-    border: 1px solid #d9d0bd;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
     border-radius: 18px;
     overflow: hidden;
 }
@@ -1329,28 +1327,27 @@ a:focus-visible {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px 24px 16px;
-    background-color: #f3efe4;
-    border-bottom: 1px solid #e5dfd2;
+    background-color: var(--bg-color-body);
+    border-bottom: 1px solid var(--border-color-gray);
 }
 
 .register-modal .login-modal-header h2 {
     margin: 0 0 6px;
     font-size: 21px;
     font-weight: 600;
-    color: #172b23;
+    color: var(--font-color-black);
 }
 
 .register-modal .login-modal-header p {
     margin: 0;
     font-size: 13px;
-    color: #52645c;
+    color: var(--font-color-gray);
 }
 
 .register-modal .login-close {
-    font-family: Arial, sans-serif;
     font-size: 25px;
     line-height: 1;
-    color: #52645c;
+    color: var(--font-color-gray);
     cursor: pointer;
 }
 
@@ -1379,13 +1376,13 @@ a:focus-visible {
 }
 
 .register-modal .login-tab-active {
-    color: white;
-    background-color: #117052;
+    color: var(--bg-color-white);
+    background-color: var(--bg-color-green);
 }
 
 .register-modal .login-tab-inactive {
-    color: #52645c;
-    background-color: #f3efe4;
+    color: var(--font-color-gray);
+    background-color: var(--bg-color-body);
 }
 
 .register-form {
@@ -1404,7 +1401,7 @@ a:focus-visible {
 .register-field label {
     font-size: 10px;
     font-weight: 500;
-    color: #52645c;
+    color: var(--font-color-gray);
     letter-spacing: 1px;
 }
 
@@ -1423,15 +1420,15 @@ a:focus-visible {
     gap: 10px;
     min-height: 40px;
     padding: 0 10px;
-    border: 1px solid #d9cbb4;
+    border: 1px solid var(--border-color-gray);
     border-radius: 12px;
-    background-color: #fffdf8;
-    color: #87978e;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-gray);
 }
 
 .register-input:focus-within {
-    outline: 3px solid #dce9df;
-    border-color: #117052;
+    outline: 3px solid var(--border-color-green-light);
+    border-color: var(--border-color-green);
 }
 
 .register-input img {
@@ -1446,20 +1443,18 @@ a:focus-visible {
     border: none;
     outline: none;
     background: transparent;
-    font-family: "Public Sans", sans-serif;
     font-size: 13px;
-    color: #172b23;
+    color: var(--font-color-gray);
 }
 
 .register-input input::placeholder {
-    color: #87978e;
+    color: var(--font-color-gray-light);
 }
 
 .register-helper {
-    font-family: "Public Sans", sans-serif;
     font-size: 10px;
     font-weight: 400;
-    color: #87978e;
+    color: var(--font-color-gray-light);
     line-height: 1.5;
 }
 
@@ -1471,9 +1466,8 @@ a:focus-visible {
     min-height: 40px;
     border: none;
     border-radius: 50px;
-    background-color: #117052;
-    color: white;
-    font-family: "Public Sans", sans-serif;
+    background-color: var(--bg-color-green);
+    color: var(--font-color-white);
     font-size: 13px;
     cursor: pointer;
 }
