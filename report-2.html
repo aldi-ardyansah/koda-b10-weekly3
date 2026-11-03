@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WargaReport - Reporting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="help.html">How it works</a>
+            <a class="public-sans" href="citizen-account.html">My Reports</a>
+        </div>
+        <div class="nav-button">
+            <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
+            <span class="button-user">
+                <div class="ibm-plex-mono button-user-initial">AA</div>
+                <div class="button-user-info">
+                    <span class="button-user-name public-sans">Aldi Ardyansah</span>
+                    <span class="button-user-role ibm-plex-mono">Citizen</span>
+                </div>
+                <img src="icons/i-chevron-down.svg">
+            </span>
+            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="report">
+            <div class="report-issue">
+                <span class="report-issue-upheading ibm-plex-mono">COMMUNITY INTAKE</span>
+                <span class="report-issue-heading fraunces">Report an Issue</span>
+                <span class="report-issue-subheading public-sans">Public civic reporting for Indonesian municipal services.</span>
+                <div class="report-issue-flow">
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">01</span>
+                        <span class="public-sans report-issue-flow-text text-black">
+                        Topic
+                        <img class="button-flow-check" src="icons/i-check-green.svg"></span>
+                    </div>
+                    <div class="button-flow-green">
+                        <span class="ibm-plex-mono report-issue-flow-number">02</span>
+                        <span class="public-sans report-issue-flow-text">Location</span>
+                    </div>
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">03</span>
+                        <span class="public-sans report-issue-flow-text">Proof</span>
+                    </div>
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">04</span>
+                        <span class="public-sans report-issue-flow-text">Review & Send</span>
+                    </div>
+                </div>
+                <div class="report-issue-independent">
+                    <span class="report-issue-independent-heading public-sans"><img src="icons/i-shield.svg">Independent Verification</span>
+                    <span class="report-issue-independent-text public-sans">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</span>
+                </div>
+                <a href="live-feed.html" class="report-issue-cancel public-sans">Cancel and return to feed</a>
+            </div>
+            <div class="report-location">
+                <div class="report-location-header">
+                    <span class="report-location-upheading ibm-plex-mono">Step 02 of 04</span>
+                    <span class="report-location-heading fraunces">Where is it located?</span>
+                    <span class="report-location-subheading public-sans">Provide street address, RT/RW, or notable landmark for inspection crews.</span>
+                </div>
+                <div class="report-location-main">
+                    <span class="ibm-plex-mono report-location-label">KELURAHAN / KECAMATAN & WILAYAH</span>
+                    <select class="report-location-input" type=""><option class="public-sans">Coblong</option></select>
+                    <span class="ibm-plex-mono report-location-label">COMMON AREAS IN COBLONG · KOTA BANDUNG</span>
+                    <div class="report-location-chip public-sans">
+                        <span class="report-location-chips">Jl. Dago</span>
+                        <span class="report-location-chips">Institut Teknologi Bandung (ITB)</span>
+                        <span class="report-location-chips">Simpang Dago</span>
+                        <span class="report-location-chips">Pasar Dago</span>
+                        <span class="report-location-chips">Jl. Ir. H. Juanda</span>
+                    </div>
+                    <span class="ibm-plex-mono report-location-label">STREET ADDRESS, RT/RW, OR LANDMARK *</span>
+                    <input class="report-location-input public-sans" type="text" value="Jl. Tamansari depan Kebun Binatang">
+                    <div class="report-location-coordinates">
+                        <img src="icons/i-map-pin.svg">
+                        <span class="report-location-coordinates-autopinned public-sans">Coordinates auto-pinned</span>
+                        <span class="report-location-coordinates-text ibm-plex-mono">6.2088° S, 106.8456° E (WIB)</span>
+                    </div>
+                </div>
+                <div class="report-location-footer">
+                    <a class="report-location-footer-back public-sans" href="report-1.html"><img src="icons/i-arrow-left.svg">Back</a>
+                    <a class="report-location-footer-continue public-sans" href="report-3.html">Continue<img src="icons/i-arrow-right.svg"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
+</body>
+</html>

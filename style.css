@@ -73,6 +73,10 @@ a:focus-visible {
     opacity: 0.6;
 }
 
+.text-black {
+    color: var(--font-color-black) !important;
+}
+
 /* --------------------Reusable Components-------------------- */
 
 .button-white,
@@ -1185,7 +1189,6 @@ a:focus-visible {
 }
 
 /* --------------------Report Page-------------------- */
-
 .report {
     display: flex;
     flex-direction: row;
@@ -1232,6 +1235,9 @@ a:focus-visible {
 .report-issue-flow-text {
     font-size: 13px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
 .button-flow-green {
@@ -1242,15 +1248,20 @@ a:focus-visible {
     border: 1px solid var(--border-color-green);
     border-radius: 999px;
     color: var(--font-color-white);
-    padding: 8px 16px;
+    padding: 12px 12px;
 }
 
 .button-flow-transparent {
     display: flex;
+    flex-direction: row;
     gap: 8px;
     align-items: center;
     color: var(--font-color-gray-light);
-    padding: 8px 16px;
+    padding: 12px 12px;
+}
+
+.button-flow-check {
+    margin-left: auto;
 }
 
 .report-issue-independent {
@@ -1382,13 +1393,151 @@ a:focus-visible {
 }
 
 .report-fixing-footer-cancel {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
     font-size: 13px;
     font-weight: 600;
     color: var(--font-color-green);
     text-decoration: none;
+    border-radius: 999px;
+    padding: 10px 20px;
 }
 
 .report-fixing-footer-continue {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-white);
+    text-decoration: none;
+    background-color: var(--bg-color-green);
+    margin-left: auto;
+    padding: 10px 20px;
+    border-radius: 999px;
+    display: flex;
+    gap: 6px;
+}
+
+.report-location {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.report-location-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.report-location-upheading {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.report-location-heading {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.report-location-subheading {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray);
+}
+
+.report-location-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.report-location-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+    letter-spacing: 0.025em;
+}
+
+.report-location-input {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-black);
+}
+
+select.report-location-input {
+    font-family: "Public Sans", sans-serif;
+}
+
+.report-location-chip {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.report-location-chips {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 6px 12px;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-black);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+}
+
+.report-location-coordinates {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--border-color-gray-light);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--bg-color-body);
+    color: var(--font-color-black);
+}
+
+.report-location-coordinates-autopinned {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.report-location-coordinates-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.report-location-footer {
+    display: flex;
+    border-top: 1px solid var(--border-color-gray);
+    padding-top: 16px;
+}
+
+.report-location-footer-back {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-black);
+    text-decoration: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 10px 20px;
+}
+
+.report-location-footer-continue {
     font-size: 13px;
     font-weight: 600;
     color: var(--font-color-white);
@@ -1830,7 +1979,7 @@ a:focus-visible {
     }
 
     body {
-        padding-top: 150px;
+        padding-top: 180px;
     }
 
     .main {
@@ -1839,7 +1988,6 @@ a:focus-visible {
 
     .hero {
         flex-direction: column;
-        padding-top: 40px;
     }
 
     .hero-text,
@@ -1918,10 +2066,6 @@ a:focus-visible {
         height: 72px;
     }
 
-    .article-live-feed {
-        margin-bottom: 60px;
-    }
-
     .articles-live-feed {
         grid-template-columns: 64px minmax(0, 1fr);
         gap: 4px 12px;
@@ -1947,7 +2091,6 @@ a:focus-visible {
     .track {
         flex-direction: column;
         gap: 24px;
-        padding: 40px 0 60px 0;
     }
 
     .track-card {
@@ -1982,7 +2125,6 @@ a:focus-visible {
     .help-container {
         flex-direction: column;
         gap: 24px;
-        padding: 40px 0 60px 0;
     }
 
     .help {
@@ -1996,6 +2138,109 @@ a:focus-visible {
 
     .help-emergency-button-container {
         flex-wrap: wrap;
+    }
+
+    .report {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .report-issue,
+    .report-fixing {
+        width: 100%;
+    }
+
+    .report-issue-heading {
+        font-size: 28px;
+    }
+
+    .report-issue-flow {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-fixing-heading {
+        font-size: 24px;
+    }
+
+    .report-fixing-main {
+        grid-template-columns: 1fr;
+    }
+
+    .report-fixing-card {
+        width: 100%;
+    }
+
+    .report-fixing-card-heading {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-fixing-card-heading-sla {
+        margin-left: auto;
+    }
+
+    .report-fixing-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-fixing-footer-cancel,
+    .report-fixing-footer-continue {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .report-location {
+        width: 100%;
+    }
+
+    .report-location-heading {
+        font-size: 24px;
+    }
+
+    .report-location-subheading {
+        font-size: 13px;
+    }
+
+    .report-location-main {
+        width: 100%;
+    }
+
+    .report-location-input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-location-chip {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-location-chips {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-location-coordinates {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-location-coordinates-text {
+        width: 100%;
+    }
+
+    .report-location-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-location-footer-back,
+    .report-location-footer-continue {
+        flex: 1;
+        justify-content: center;
     }
 
     .login-modal {
