@@ -77,6 +77,10 @@ a:focus-visible {
     color: var(--font-color-black) !important;
 }
 
+.bold-700 {
+    font-weight: 700;
+}
+
 /* --------------------Reusable Components-------------------- */
 
 .button-white,
@@ -1940,6 +1944,181 @@ select.report-location-input {
     flex-direction: row;
     align-items: center;
     gap: 8px;
+}
+
+/* --------------------Receipt Page-------------------- */
+.receipt {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.receipt-header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 16px 0;
+    gap: 16px;
+}
+
+.receipt-header-heading {
+    display: flex;
+    align-items: center;
+}
+
+.receipt-header-heading-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-color-body);
+    border: 1px solid var(--border-color-gray);
+    color: var(--font-color-gray);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+.receipt-header-heading-time {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.receipt-header-heading-reference {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--font-color-gray-light);
+    letter-spacing: 0.15em;
+}
+
+.receipt-header-heading-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.receipt-header-heading-number :nth-child(1) {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--font-color-green);
+}
+
+.receipt-header-heading-number :nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 12px;
+}
+
+.receipt-header-heading-text {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-body-card);
+    border: 1px dashed var(--border-color-gray);
+    border-radius: 10px;
+    padding: 16px;
+    gap: 12px;
+}
+
+.receipt-header-heading-text :nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.receipt-header-heading-text :nth-child(2) {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.receipt-main {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color-gray);
+    padding: 16px 0 16px 0;
+}
+
+.receipt-main-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.receipt-main-ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+    list-style-position: outside;
+    line-height: 1.5em;
+}
+
+.receipt-main-ol li::marker {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-green);
+}
+
+.receipt-main-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray);
+}
+
+.receipt-footer {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border-color-gray);
+    padding-top: 16px;
+    gap: 12px;
+}
+
+.receipt-footer-track {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-white);
+    text-decoration: none;
+    background-color: var(--bg-color-green);
+    border: 1px solid var(--border-color-green);
+    border-radius: 999px;
+    padding: 10px 20px;
+}
+
+.receipt-footer-print {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-black);
+    text-decoration: none;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 10px 20px;
+}
+
+.receipt-footer-feed {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-green);
+    text-decoration: none;
+    border-radius: 999px;
 }
 
 /* --------------------Sign in-------------------- */
