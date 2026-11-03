@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WargaReport - Reporting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="help.html">How it works</a>
+            <a class="public-sans" href="citizen-account.html">My Reports</a>
+        </div>
+        <div class="nav-button">
+            <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
+            <span class="button-user">
+                <div class="ibm-plex-mono button-user-initial">AA</div>
+                <div class="button-user-info">
+                    <span class="button-user-name public-sans">Aldi Ardyansah</span>
+                    <span class="button-user-role ibm-plex-mono">Citizen</span>
+                </div>
+                <img src="icons/i-chevron-down.svg">
+            </span>
+            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="report">
+            <div class="report-issue">
+                <span class="report-issue-upheading ibm-plex-mono">COMMUNITY INTAKE</span>
+                <span class="report-issue-heading fraunces">Report an Issue</span>
+                <span class="report-issue-subheading public-sans">Public civic reporting for Indonesian municipal services.</span>
+                <div class="report-issue-flow">
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">01</span>
+                        <span class="public-sans report-issue-flow-text text-black">Topic</span>
+                        <img class="button-flow-check" src="icons/i-check-green.svg"></span>
+                    </div>
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">02</span>
+                        <span class="public-sans report-issue-flow-text text-black">Location</span>
+                        <img class="button-flow-check" src="icons/i-check-green.svg"></span>
+                    </div>
+                    <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">03</span>
+                        <span class="public-sans report-issue-flow-text text-black">Proof</span>
+                        <img class="button-flow-check" src="icons/i-check-green.svg"></span>
+                    </div>
+                    <div class="button-flow-green">
+                        <span class="ibm-plex-mono report-issue-flow-number">04</span>
+                        <span class="public-sans report-issue-flow-text">Review & Send</span>
+                    </div>
+                </div>
+                <div class="report-issue-independent">
+                    <span class="report-issue-independent-heading public-sans"><img src="icons/i-shield.svg">Independent Verification</span>
+                    <span class="report-issue-independent-text public-sans">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</span>
+                </div>
+                <a href="live-feed.html" class="report-issue-cancel public-sans">Cancel and return to feed</a>
+            </div>
+            <div class="report-review">
+                <div class="report-review-header">
+                    <span class="report-review-upheading ibm-plex-mono">STEP 04 OF 04</span>
+                    <span class="report-review-heading fraunces">Report summary & declaration</span>
+                    <span class="report-review-subheading public-sans">Review the report and choose notifications before final submission.</span>
+                </div>
+                <div class="report-review-main">
+                    <div class="report-review-container">
+                        <span class="report-review-label ibm-plex-mono">CONCISE TITLE *</span>
+                        <input class="report-review-input public-sans" type="text" value="Pohon tumbang di depan Kebun Binatang samping Kampus ITB">
+                    </div>
+                    <div class="report-review-container">
+                        <div>
+                            <span class="report-review-label ibm-plex-mono">INCIDENT OBSERVATION DETAILS *</span>
+                            <span class="report-review-details ibm-plex-mono">100 chars (min 15)</span>
+                        </div>
+                        <textarea class="report-review-textarea public-sans">Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon untuk diperhatikan</textarea>
+                    </div>
+                    <div class="report-review-anonymous">
+                        <img src="icons/i-lock-green.svg">
+                        <div>
+                            <span class="public-sans report-review-anonymous-heading">Post anonymously on public feed</span>
+                            <span class="public-sans report-review-anonymous-subheading">Your name will be masked as Warga Anonim on open records.</span>
+                        </div>
+                        <input class="report-review-anonymous-checkbox" type="checkbox">
+                    </div>
+                    <div class="report-review-grid">
+                        <div>
+                            <span class="report-review-label ibm-plex-mono">FILLER NAME *</span>
+                            <input class="report-review-input public-sans" type="text" value="Aldi Ardyansah">
+                        </div>
+                        <div>
+                            <span class="report-review-label ibm-plex-mono">EMAIL FOR STATUS ALERTS *</span>
+                            <input class="report-review-input public-sans" type="text" value="aldi@wargareport.id">
+                        </div>
+                        <div>
+                            <span class="report-review-label ibm-plex-mono">PHONE / WHATSAPP</span>
+                            <input class="report-review-input public-sans" type="text" value="+62 812-9842-1054">
+                        </div>
+                        <div class="report-review-status-alert">
+                            <span class="report-review-label ibm-plex-mono">STATUS ALERT CHANNELS</span>
+                            <div class="report-review-status-alert-container">
+                                <input type="checkbox">
+                                <span class="report-review-text public-sans">Email</span>
+                                <input type="checkbox">
+                                <span class="report-review-text public-sans">SMS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-review-confirm">
+                        <input type="checkbox">
+                        <span class="report-review-text public-sans">I confirm this incident was authentically observed on-site under Law No. 25/2009.</span>
+                    </div>
+                </div>
+                <div class="report-review-footer">
+                    <a class="report-review-footer-back public-sans" href="report-3.html"><img src="icons/i-arrow-left.svg">Back</a>
+                    <a class="report-review-footer-continue public-sans" href="receipt.html">Dispatch Report<img src="icons/i-arrow-right.svg"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
+</body>
+</html>
