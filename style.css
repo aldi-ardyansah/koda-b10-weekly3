@@ -1082,6 +1082,10 @@ a:focus-visible {
     background-color: var(--bg-color-white);
 }
 
+.help-card-body > span {
+    line-height: 1.5em;
+}
+
 .chevron-up {
     margin-left: auto;
     flex-shrink: 0;
