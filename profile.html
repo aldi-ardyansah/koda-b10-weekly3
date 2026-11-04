@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WargaReport - Notifications</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="help.html">How it works</a>
+            <a class="public-sans" href="citizen-account.html">My Reports</a>
+        </div>
+        <div class="nav-button">
+            <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
+            <span class="button-user">
+                <div class="ibm-plex-mono button-user-initial">AA</div>
+                <div class="button-user-info">
+                    <span class="button-user-name public-sans">Aldi Ardyansah</span>
+                    <span class="button-user-role ibm-plex-mono">Citizen</span>
+                </div>
+                <img src="icons/i-chevron-down.svg">
+            </span>
+            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="profile">
+            <div class="profile-header">
+                <span class="profile-upheading ibm-plex-mono">CITIZEN MANAGEMENT</span>
+                <span class="profile-heading fraunces">Account & Case History</span>
+            </div>
+            <div class="profile-nav">
+                <a href="list-complaint.html" class="complaint-nav-link public-sans">My complaints</a>
+                <a href="profile.html" class="complaint-nav-active public-sans">Profile</a>
+                <a href="notification-settings.html" class="complaint-nav-link public-sans">Notifications</a>
+                <a href="data-export.html" class="complaint-nav-link public-sans">Privacy & data</a>
+                <a href="security.html" class="complaint-nav-link public-sans">Security</a>
+            </div>
+            <div class="profile-main">
+                <form class="profile-card">
+                    <div class="profile-card-header">
+                        <span class="profile-card-heading fraunces">Profile Identity & Preferences</span>
+                        <p class="profile-card-description public-sans">Used to pre-fill future complaint forms and verify status inquiries.</p>
+                    </div>
+                    <div class="profile-photo">
+                        <div class="profile-photo-avatar public-sans">AA</div>
+                        <div class="profile-photo-content">
+                            <span class="profile-photo-title public-sans">Profile photo</span>
+                            <span class="profile-photo-description public-sans">JPG, PNG, or WebP. Square images work best.</span>
+                            <label for="profile-photo-upload" class="profile-photo-button public-sans">Upload photo</label>
+                            <input type="file" id="profile-photo-upload" class="profile-photo-input" accept="image/jpeg,image/png,image/webp">
+                        </div>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <div class="profile-fields">
+                        <div class="profile-field">
+                            <label for="profile-name" class="profile-label ibm-plex-mono">FULL LEGAL NAME</label>
+                            <input type="text" id="profile-name" class="profile-input public-sans" placeholder="Your full name">
+                        </div>
+                        <div class="profile-field">
+                            <label for="profile-email" class="profile-label ibm-plex-mono">PRIMARY NOTIFICATION EMAIL</label>
+                            <input type="email" id="profile-email" class="profile-input public-sans" placeholder="your@email.com">
+                        </div>
+                        <div class="profile-field">
+                            <label for="profile-phone" class="profile-label ibm-plex-mono">SMS CONTACT NUMBER</label>
+                            <input type="tel" id="profile-phone" class="profile-input public-sans" placeholder="+62 8xx-xxxx-xxxx">
+                        </div>
+                        <div class="profile-field">
+                            <label for="profile-nik" class="profile-label ibm-plex-mono">NIK</label>
+                            <input type="text" id="profile-nik" class="profile-input public-sans" placeholder="Enter your NIK" inputmode="numeric" maxlength="16">
+                        </div>
+                    </div>
+                    <div class="profile-card-footer">
+                        <button type="submit" class="profile-save-button public-sans">Save profile changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
+</body>
+</html>
