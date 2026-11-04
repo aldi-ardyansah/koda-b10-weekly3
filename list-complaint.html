@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WargaReport - Notifications</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="help.html">How it works</a>
+            <a class="public-sans" href="citizen-account.html">My Reports</a>
+        </div>
+        <div class="nav-button">
+            <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
+            <span class="button-user">
+                <div class="ibm-plex-mono button-user-initial">AA</div>
+                <div class="button-user-info">
+                    <span class="button-user-name public-sans">Aldi Ardyansah</span>
+                    <span class="button-user-role ibm-plex-mono">Citizen</span>
+                </div>
+                <img src="icons/i-chevron-down.svg">
+            </span>
+            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="complaint">
+            <div class="complaint-header">
+                <span class="complaint-upheading ibm-plex-mono">CITIZEN MANAGEMENT</span>
+                <span class="complaint-heading fraunces">Account & Case History</span>
+            </div>
+            <div class="complaint-nav">
+                <a href="citizen-account.html" class="complaint-nav-active public-sans">My complaints</a>
+                <a href="#" class="complaint-nav-link public-sans">Profile</a>
+                <a href="notification.html" class="complaint-nav-link public-sans">Notifications</a>
+                <a href="#" class="complaint-nav-link public-sans">Privacy & data</a>
+                <a href="#" class="complaint-nav-link public-sans">Security</a>
+            </div>
+            <div class="complaint-main">
+                <div class="complaint-main-header">
+                    <span class="complaint-main-heading ibm-plex-mono">YOUR TRACKED RECORDS (2)</span>
+                    <a href="report-1.html" class="complaint-main-button public-sans">
+                        <img src="icons/i-plus.svg" alt="">
+                        File new complaint
+                    </a>
+                </div>
+                <div class="complaint-table">
+                    <div class="complaint-table-header">
+                        <span class="complaint-table-label ibm-plex-mono">CASE ID</span>
+                        <span class="complaint-table-label ibm-plex-mono">TITLE / LOCATION</span>
+                        <span class="complaint-table-label ibm-plex-mono">AGENCY</span>
+                        <span class="complaint-table-label ibm-plex-mono">STATUS</span>
+                        <span class="complaint-table-label ibm-plex-mono">SLA TARGET</span>
+                        <span class="complaint-table-label ibm-plex-mono">LAST UPDATE</span>
+                    </div>
+                    <div class="complaint-table-row">
+                        <span class="complaint-case-id ibm-plex-mono">
+                            CMP-2026-9472
+                        </span>
+                        <div class="complaint-case-details">
+                            <span class="complaint-case-title public-sans">
+                                Pohon tumbang di depan Kebun Binatang samping Kampus ITB
+                            </span>
+                            <span class="complaint-case-location public-sans">
+                                Jl. Tamansari depan Kebun Binatang
+                            </span>
+                        </div>
+                        <span class="complaint-agency public-sans">
+                            Dinas Pertamanan dan Hutan Kota Bandung
+                        </span>
+                        <span class="complaint-status complaint-status-submitted public-sans">
+                            <img src="icons/i-clock.svg" alt="">
+                            Submitted
+                        </span>
+                        <span class="complaint-sla ibm-plex-mono">
+                            Awaiting verification
+                        </span>
+                        <span class="complaint-update ibm-plex-mono">
+                            Oct 30
+                        </span>
+                    </div>
+                    <div class="complaint-table-row">
+                        <span class="complaint-case-id ibm-plex-mono">
+                            CMP-2026-8841
+                        </span>
+                        <div class="complaint-case-details">
+                            <span class="complaint-case-title public-sans">
+                                PAM clean drinking water pipeline burst flooding sidewalk in front of Cipete Raya MRT
+                            </span>
+                            <span class="complaint-case-location public-sans">
+                                Jl. Fatmawati Raya No. 42 (depan Stasiun MRT Cipete Raya)
+                            </span>
+                        </div>
+                        <span class="complaint-agency public-sans">
+                            Perumda PAM JAYA (Clean Drinking Water)
+                        </span>
+                        <span class="complaint-status complaint-status-review public-sans">
+                            <img src="icons/i-search.svg" alt="">
+                            In review
+                        </span>
+                        <span class="complaint-sla complaint-sla-breached ibm-plex-mono">
+                            <img src="icons/i-warning-red.svg" alt="">
+                            Breached by 64h 2m
+                        </span>
+                        <span class="complaint-update ibm-plex-mono">
+                            Oct 29
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
+</body>
+</html>
