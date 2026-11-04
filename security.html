@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WargaReport - Security</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="security.css">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="icons/logo.svg">
+            <a class="fraunces" href="index.html">WargaReport</a>
+        </div>
+        <div class="nav-pages">
+            <a class="public-sans" href="live-feed.html">Live Feed</a>
+            <a class="public-sans" href="track.html">Track</a>
+            <a class="public-sans" href="help.html">How it works</a>
+            <a class="public-sans" href="citizen-account.html">My Reports</a>
+        </div>
+        <div class="nav-button">
+            <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
+            <span class="button-user">
+                <div class="ibm-plex-mono button-user-initial">AA</div>
+                <div class="button-user-info">
+                    <span class="button-user-name public-sans">Aldi Ardyansah</span>
+                    <span class="button-user-role ibm-plex-mono">Citizen</span>
+                </div>
+                <img src="icons/i-chevron-down.svg">
+            </span>
+            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="security">
+            <div class="security-header">
+                <span class="security-upheading ibm-plex-mono">CITIZEN MANAGEMENT</span>
+                <span class="security-heading fraunces">Account & Case History</span>
+            </div>
+            <div class="security-nav">
+                <a href="list-complaint.html" class="security-nav-link public-sans">My complaints</a>
+                <a href="profile.html" class="security-nav-link public-sans">Profile</a>
+                <a href="notification-settings.html" class="security-nav-link public-sans">Notifications</a>
+                <a href="data-export.html" class="security-nav-link public-sans">Privacy & data</a>
+                <a href="security.html" class="security-nav-active public-sans">Security</a>
+            </div>
+            <div class="security-main">
+                <form class="security-card">
+                    <div class="security-card-header">
+                        <span class="security-card-heading fraunces">Security</span>
+                        <span class="security-card-description public-sans">Change the password used to sign in to your WargaReport account.</span>
+                    </div>
+                    <div class="security-fields">
+                        <div class="security-field">
+                            <label for="security-current-password" class="security-label ibm-plex-mono">CURRENT PASSWORD</label>
+                            <div class="security-input-wrapper">
+                                <input type="password" id="security-current-password" class="security-input public-sans" placeholder="Enter current password">
+                                <button type="button" class="security-toggle-password" aria-label="Show current password"><img src="icons/i-eye.svg"></button>
+                            </div>
+                            <span class="security-field-description public-sans">Required to confirm any password change.</span>
+                        </div>
+                        <div class="security-field">
+                            <label for="security-new-password" class="security-label ibm-plex-mono">NEW PASSWORD</label>
+                            <div class="security-input-wrapper">
+                                <input type="password" id="security-new-password" class="security-input public-sans" placeholder="At least 8 characters">
+                                <button type="button" class="security-toggle-password" aria-label="Show new password"><img src="icons/i-eye.svg"></button>
+                            </div>
+                            <span class="security-field-description public-sans">Use at least 8 characters, including a letter and a number.</span>
+                        </div>
+                        <div class="security-field">
+                            <label for="security-confirm-password" class="security-label ibm-plex-mono">CONFIRM NEW PASSWORD</label>
+                            <div class="security-input-wrapper">
+                                <input type="password" id="security-confirm-password" class="security-input public-sans" placeholder="Re-enter new password">
+                                <button type="button" class="security-toggle-password" aria-label="Show confirm password"><img src="icons/i-eye.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="security-card-footer">
+                        <button type="submit" class="security-save-button public-sans">Update password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-header">
+            <div class="footer-heading fraunces">WargaReport</div>
+            <div class="footer-text public-sans">WargaReport is an independent civic reporting platform for municipal infrastructure issues across Indonesia. Residents submit evidence, follow SLA countdowns, and track resolution updates from the responsible agencies.</div>
+            <div class="footer-warning public-sans">Not for life-threatening emergencies — call 112 (National Emergency Call Center) or BPBD DKI directly.</div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CITIZENS</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">File a report</a>
+                <a class="public-sans" href="#">Track complaint</a>
+                <a class="public-sans" href="#">Public reports registry</a>
+                <a class="public-sans" href="#">My filing history</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">AGENCIES</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Participating bureaus</a>
+                <a class="public-sans" href="#">Officer triage queue</a>
+                <a class="public-sans" href="#">SLA benchmarks</a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-body-heading ibm-plex-mono">CIVIC TRUST</div>
+            <div class="footer-body-link">
+                <a class="public-sans" href="#">Help & FAQs</a>
+                <a class="public-sans" href="#">Evidence guidelines</a>
+                <a class="public-sans" href="#">PII & redaction policy</a>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <span class="public-sans">© 2026 WargaReport. All rights reserved.</span>
+            <span class="ibm-plex-mono">UU No. 25/2009 Compliant</span>
+        </div>
+    </footer>
+</body>
+</html>
