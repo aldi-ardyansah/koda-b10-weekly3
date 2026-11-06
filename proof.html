@@ -17,7 +17,7 @@
             <a class="public-sans" href="live-feed.html">Live Feed</a>
             <a class="public-sans" href="track.html">Track</a>
             <a class="public-sans" href="help.html">How it works</a>
-            <a class="public-sans" href="citizen-account.html">My Reports</a>
+            <a class="public-sans" href="list-complaint.html">My Reports</a>
         </div>
         <div class="nav-button">
             <a class="public-sans" href="notification.html"><img src="icons/i-notifications.svg"></a>
@@ -29,7 +29,7 @@
                 </div>
                 <img src="icons/i-chevron-down.svg">
             </span>
-            <a class="button-green public-sans" href="report-1.html"><img src="icons/i-plus.svg">Report an Issue</a>
+            <a class="button-green public-sans" href="topic.html"><img src="icons/i-plus.svg">Report an Issue</a>
         </div>
     </nav>
     <main class="main">
@@ -44,11 +44,12 @@
                         <span class="public-sans report-issue-flow-text text-black">Topic</span>
                         <img class="button-flow-check" src="icons/i-check-green.svg"></span>
                     </div>
-                    <div class="button-flow-green">
-                        <span class="ibm-plex-mono report-issue-flow-number">02</span>
-                        <span class="public-sans report-issue-flow-text">Location</span>
-                    </div>
                     <div class="button-flow-transparent">
+                        <span class="ibm-plex-mono report-issue-flow-number">02</span>
+                        <span class="public-sans report-issue-flow-text text-black">Location</span>
+                        <img class="button-flow-check" src="icons/i-check-green.svg"></span>
+                    </div>
+                    <div class="button-flow-green">
                         <span class="ibm-plex-mono report-issue-flow-number">03</span>
                         <span class="public-sans report-issue-flow-text">Proof</span>
                     </div>
@@ -63,34 +64,51 @@
                 </div>
                 <a href="live-feed.html" class="report-issue-cancel public-sans">Cancel and return to feed</a>
             </div>
-            <div class="report-location">
-                <div class="report-location-header">
-                    <span class="report-location-upheading ibm-plex-mono">STEP 02 OF 04</span>
-                    <span class="report-location-heading fraunces">Where is it located?</span>
-                    <span class="report-location-subheading public-sans">Provide street address, RT/RW, or notable landmark for inspection crews.</span>
+            <div class="report-evidence">
+                <div class="report-evidence-header">
+                    <span class="report-evidence-upheading ibm-plex-mono">STEP 03 OF 04</span>
+                    <span class="report-evidence-heading fraunces">Attach evidence</span>
+                    <span class="report-evidence-subheading public-sans">Reports with photographic proof or audio notes are prioritized by field dispatchers.</span>
                 </div>
-                <div class="report-location-main">
-                    <span class="ibm-plex-mono report-location-label">KELURAHAN / KECAMATAN & WILAYAH</span>
-                    <select class="report-location-input" type=""><option class="public-sans">Coblong</option></select>
-                    <span class="ibm-plex-mono report-location-label">COMMON AREAS IN COBLONG · KOTA BANDUNG</span>
-                    <div class="report-location-chip public-sans">
-                        <span class="report-location-chips">Jl. Dago</span>
-                        <span class="report-location-chips">Institut Teknologi Bandung (ITB)</span>
-                        <span class="report-location-chips">Simpang Dago</span>
-                        <span class="report-location-chips">Pasar Dago</span>
-                        <span class="report-location-chips">Jl. Ir. H. Juanda</span>
+                <div class="report-evidence-main">
+                    <div class="report-evidence-upload">
+                        <img src="icons/i-upload-green.svg">
+                        <span class="report-evidence-upload-heading public-sans">Upload evidence files or use camera simulation</span>
+                        <span class="report-evidence-upload-subheading public-sans">Images, audio voice notes, inspection video clips (JPG, MP4, M4A)</span>
+                        <div class="report-evidence-attach public-sans">
+                            <span class="report-evidence-attach-button"><img src="icons/i-camera-black.svg">Capture Photo</span>
+                            <span class="report-evidence-attach-button"><img src="icons/i-record-black.svg">Record Audio Memo</span>
+                            <span class="report-evidence-attach-button"><img src="icons/i-video-black.svg">Attach Video Clip</span>
+                        </div>
                     </div>
-                    <span class="ibm-plex-mono report-location-label">STREET ADDRESS, RT/RW, OR LANDMARK *</span>
-                    <input class="report-location-input public-sans" type="text" value="Jl. Tamansari depan Kebun Binatang">
-                    <div class="report-location-coordinates">
-                        <img src="icons/i-map-pin.svg">
-                        <span class="report-location-coordinates-autopinned public-sans">Coordinates auto-pinned</span>
-                        <span class="report-location-coordinates-text ibm-plex-mono">6.2088° S, 106.8456° E (WIB)</span>
+                    <div class="report-attached-evidence">
+                        <div class="report-attached-evidence-header">
+                            <span class="report-attached-evidence-header-1 ibm-plex-mono">ATTACHED EVIDENCE (2)</span>
+                            <span class="report-attached-evidence-header-2 public-sans">Click any card to inspect</span>
+                        </div>
+                        <div class="report-attached-evidence-main">
+                            <div class="report-attached-card">
+                                <img src="images/evidence-1.svg">
+                                <div>
+                                    <span class="report-attached-filename public-sans">incident_capture_camera.jpg<img src="icons/i-trashbin.svg"></span>
+                                    <span class="report-attached-filetype ibm-plex-mono">IMAGE · 2.4 MB</span>
+                                    <span class="report-attached-fileinfo public-sans">Photographed live on-site by resident camera.</span>
+                                </div>
+                            </div>
+                            <div class="report-attached-card">
+                                <img src="images/evidence-2.svg">
+                                <div>
+                                    <span class="report-attached-filename public-sans">quick_site_clip.mp4<img src="icons/i-trashbin.svg"></span>
+                                    <span class="report-attached-filetype ibm-plex-mono">VIDEO · 4.8 MB</span>
+                                    <span class="report-attached-fileinfo public-sans">12-second horizontal pan of incident.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="report-location-footer">
-                    <a class="report-location-footer-back public-sans" href="report-1.html"><img src="icons/i-arrow-left.svg">Back</a>
-                    <a class="report-location-footer-continue public-sans" href="report-3.html">Continue<img src="icons/i-arrow-right.svg"></a>
+                <div class="report-evidence-footer">
+                    <a class="report-evidence-footer-back public-sans" href="location.html"><img src="icons/i-arrow-left.svg">Back</a>
+                    <a class="report-evidence-footer-continue public-sans" href="review.html">Continue<img src="icons/i-arrow-right.svg"></a>
                 </div>
             </div>
         </div>

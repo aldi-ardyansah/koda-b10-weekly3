@@ -1,0 +1,165 @@
+/* --------------------Security Page-------------------- */
+.security {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.security-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.security-upheading {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--font-color-gray-light);
+    letter-spacing: 0.12em;
+}
+.security-heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+.security-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color-gray);
+    padding: 12px 0;
+}
+.security-nav-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color-green);
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--font-color-white);
+    text-decoration: none;
+}
+.security-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+    text-decoration: none;
+}
+.security-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.security-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 685px;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 16px;
+    padding: 24px;
+}
+.security-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.security-card-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+.security-card-description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--font-color-gray-light);
+}
+.security-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 20px;
+}
+.security-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.security-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+    letter-spacing: 0.05em;
+}
+.security-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 12px;
+    padding: 0 12px;
+}
+.security-input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--font-color-black);
+}
+.security-input::placeholder {
+    color: var(--font-color-gray-light);
+}
+.security-toggle-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.security-toggle-password img {
+    width: 16px;
+    height: 16px;
+}
+.security-field-description {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--font-color-gray-light);
+}
+.security-card-footer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+}
+.security-save-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color-green);
+    border: 1px solid var(--border-color-green);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--font-color-white);
+    cursor: pointer;
+}

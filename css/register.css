@@ -1,0 +1,163 @@
+/* --------------------Register-------------------- */
+#register-toggle:not(:checked) ~ .login-overlay {
+    display: none;
+}
+
+.register-modal {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.register-modal .login-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    background-color: var(--bg-color-body);
+    border-bottom: 1px solid var(--border-color-gray);
+}
+
+.register-modal .login-modal-header h2 {
+    margin: 0 0 6px;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.register-modal .login-modal-header p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--font-color-gray);
+}
+
+.register-modal .login-close {
+    font-size: 25px;
+    line-height: 1;
+    color: var(--font-color-gray);
+    cursor: pointer;
+}
+
+.register-modal-body {
+    padding: 14px 20px 20px;
+}
+
+.register-modal .login-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.register-modal .login-tabs a,
+.register-modal .login-tabs span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 46px;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register-modal .login-tab-active {
+    color: var(--bg-color-white);
+    background-color: var(--bg-color-green);
+}
+
+.register-modal .login-tab-inactive {
+    color: var(--font-color-gray);
+    background-color: var(--bg-color-body);
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.register-field label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+    letter-spacing: 1px;
+}
+
+.register-field-row {
+    display: flex;
+    gap: 12px;
+}
+
+.register-field-row .register-field {
+    flex: 1;
+}
+
+.register-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 12px;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-gray);
+}
+
+.register-input:focus-within {
+    outline: 3px solid var(--border-color-green-light);
+    border-color: var(--border-color-green);
+}
+
+.register-input img {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.register-input input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    color: var(--font-color-gray);
+}
+
+.register-input input::placeholder {
+    color: var(--font-color-gray-light);
+}
+
+.register-helper {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+    line-height: 1.5;
+}
+
+.register-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 40px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--bg-color-green);
+    color: var(--font-color-white);
+    font-size: 13px;
+    cursor: pointer;
+}

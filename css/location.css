@@ -1,0 +1,132 @@
+/* Location Page */
+.report-location {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.report-location-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.report-location-upheading {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.report-location-heading {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.report-location-subheading {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray);
+}
+
+.report-location-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.report-location-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+    letter-spacing: 0.025em;
+}
+
+.report-location-input {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-black);
+}
+
+select.report-location-input {
+    font-family: "Public Sans", sans-serif;
+}
+
+.report-location-chip {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.report-location-chips {
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 6px 12px;
+    background-color: var(--bg-color-white);
+    color: var(--font-color-black);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+}
+
+.report-location-coordinates {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--border-color-gray-light);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: var(--bg-color-body);
+    color: var(--font-color-black);
+}
+
+.report-location-coordinates-autopinned {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--font-color-black);
+}
+
+.report-location-coordinates-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.report-location-footer {
+    display: flex;
+    border-top: 1px solid var(--border-color-gray);
+    padding-top: 16px;
+}
+
+.report-location-footer-back {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-black);
+    text-decoration: none;
+    border: 1px solid var(--border-color-gray);
+    border-radius: 999px;
+    padding: 10px 20px;
+}
+
+.report-location-footer-continue {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--font-color-white);
+    text-decoration: none;
+    background-color: var(--bg-color-green);
+    margin-left: auto;
+    padding: 10px 20px;
+    border-radius: 999px;
+    display: flex;
+    gap: 6px;
+}

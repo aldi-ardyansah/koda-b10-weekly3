@@ -1,0 +1,140 @@
+/* --------------------Track Page-------------------- */
+.track {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.track-card {
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 8px;
+}
+
+.track-upheading {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--font-color-gray-light);
+}
+
+.track-heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--font-color-black);
+    letter-spacing: -0.025em;
+}
+
+.track-subheading {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--font-color-gray);
+    line-height: 1.5em;
+}
+
+/* Track Form */
+.track-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.track-label-input {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--font-color-gray);
+}
+
+.track-input {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.track-input::placeholder {
+    color: var(--font-color-gray-light);
+}
+
+.track-button {
+    display: flex;
+    align-content: center;
+    align-self: flex-start;
+    gap: 4px;
+    text-decoration: none;
+    background-color: var(--bg-color-green);
+    color: var(--font-color-white);
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border-color-green);
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Track Footer */
+.track-footer {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid var(--border-color-gray);
+    padding-top: 15px;
+}
+
+.track-record {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--font-color-gray-light);
+}
+
+.track-code {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--font-color-green);
+}
+
+/* Track Sidebar */
+.track-sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    line-height: 1.25em;
+}
+
+.track-info-icon {
+    flex: 0 0 auto;
+}
+
+.track-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--font-color-gray);
+}
+
+.track-lost {
+    border-top: 1px solid var(--border-color-gray);
+    padding-top: 20px;
+}
+
+.track-lost > a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--font-color-green);
+}

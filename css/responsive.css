@@ -1,0 +1,892 @@
+/* --------------------Responsive for Mobile-------------------- */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 24px;
+    }
+
+    .nav > .nav-pages {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body {
+        padding-top: 180px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-subtext,
+    .hero-text-pages,
+    .hero-uptext-pages,
+    .hero-subtext-pages {
+        width: 100%;
+    }
+
+    .input-search {
+        width: 100%;
+    }
+
+    .hero-subtext-map {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-feed-map {
+        margin-left: 0;
+    }
+
+    .status-proof {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status {
+        border-radius: 20px;
+    }
+
+    .proof {
+        margin-left: 0;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .article {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .article-header {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
+        column-gap: 12px;
+    }
+
+    .article-header > .article-header-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .article-header > .article-header-subtext {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .article-header > .article-header-view {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: center;
+        justify-self: end;
+        white-space: nowrap;
+    }
+
+    .articles {
+        grid-template-columns: 72px minmax(0, 1fr);
+    }
+
+    .articles-img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .articles-live-feed {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 4px 12px;
+    }
+
+    .articles-live-feed > img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .articles-header,
+    .articles-text,
+    .articles-location,
+    .articles-footer {
+        min-width: 0;
+    }
+
+    .articles-header,
+    .articles-location {
+        flex-wrap: wrap;
+    }
+
+    .track {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .track-card {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .track-heading {
+        font-size: 30px;
+    }
+
+    .track-sidebar {
+        width: 100%;
+    }
+
+    .track-info {
+        width: 100%;
+    }
+
+    .track-info-icon {
+        flex: 0 0 auto;
+    }
+
+    .track-info-text {
+        min-width: 0;
+    }
+
+    .track-lost {
+        width: 100%;
+    }
+
+    .help-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .help {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .help-right {
+        width: 100%;
+    }
+
+    .help-emergency-button-container {
+        flex-wrap: wrap;
+    }
+
+    .report {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .report-issue,
+    .report-fixing {
+        width: 100%;
+    }
+
+    .report-issue-heading {
+        font-size: 28px;
+    }
+
+    .report-issue-flow {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-fixing-heading {
+        font-size: 24px;
+    }
+
+    .report-fixing-main {
+        grid-template-columns: 1fr;
+    }
+
+    .report-fixing-card {
+        width: 100%;
+    }
+
+    .report-fixing-card-heading {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-fixing-card-heading-sla {
+        margin-left: auto;
+    }
+
+    .report-fixing-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-fixing-footer-cancel,
+    .report-fixing-footer-continue {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .report-location {
+        width: 100%;
+    }
+
+    .report-location-heading {
+        font-size: 24px;
+    }
+
+    .report-location-subheading {
+        font-size: 13px;
+    }
+
+    .report-location-main {
+        width: 100%;
+    }
+
+    .report-location-input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-location-chip {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-location-chips {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-location-coordinates {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .report-location-coordinates-text {
+        width: 100%;
+    }
+
+    .report-location-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-location-footer-back,
+    .report-location-footer-continue {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .report-evidence {
+        width: 100%;
+    }
+
+    .report-evidence-heading {
+        font-size: 24px;
+    }
+
+    .report-evidence-subheading {
+        font-size: 13px;
+    }
+
+    .report-evidence-main {
+        width: 100%;
+    }
+
+    .report-evidence-upload {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .report-evidence-attach {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .report-evidence-attach-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .report-attached-evidence {
+        width: 100%;
+    }
+
+    .report-attached-evidence-main {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .report-attached-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .report-attached-card > img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .report-attached-filename {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        overflow-wrap: anywhere;
+    }
+
+    .report-attached-filename img {
+        flex-shrink: 0;
+    }
+
+    .report-evidence-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-evidence-footer-back,
+    .report-evidence-footer-continue {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .report-review {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .report-review-heading {
+        font-size: 22px;
+    }
+
+    .report-review-subheading {
+        font-size: 12px;
+    }
+
+    .report-review-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .report-review-status-alert {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .report-review-status-alert-container {
+        gap: 0 8px;
+    }
+
+    .report-review-confirm {
+        align-items: flex-start;
+    }
+
+    .report-review-footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .report-review-footer-back,
+    .report-review-footer-continue {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .receipt {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .receipt-header {
+        gap: 14px;
+    }
+
+    .receipt-header-heading {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .receipt-header-heading-time {
+        font-size: 11px;
+    }
+
+    .receipt-header-heading-reference {
+        font-size: 10px;
+        letter-spacing: 0.1em;
+    }
+
+    .receipt-header-heading-number {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .receipt-header-heading-number :nth-child(1) {
+        font-size: 26px;
+        overflow-wrap: anywhere;
+    }
+
+    .receipt-header-heading-text {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .receipt-header-heading-text :nth-child(1) {
+        font-size: 14px;
+    }
+
+    .receipt-header-heading-text :nth-child(2) {
+        font-size: 12px;
+    }
+
+    .receipt-main {
+        padding: 16px 0;
+    }
+
+    .receipt-main-heading {
+        font-size: 15px;
+    }
+
+    .receipt-main-ol {
+        padding-left: 20px;
+    }
+
+    .receipt-main-text {
+        font-size: 12px;
+    }
+
+    .receipt-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .receipt-footer-track,
+    .receipt-footer-print,
+    .receipt-footer-feed {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        padding: 10px 16px;
+    }
+
+    .notification-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .notification-list,
+    .notification-detail {
+        width: 100%;
+    }
+
+    .notification-list-item {
+        padding: 16px;
+    }
+
+    .notification-list-item-active {
+        padding-left: 13px;
+    }
+
+    .notification-detail {
+        padding: 20px;
+    }
+
+    .notification-detail-header {
+        flex-wrap: wrap;
+    }
+
+    .notification-detail-number {
+        font-size: 18px;
+    }
+
+    .notification-detail-title {
+        font-size: 20px;
+    }
+
+    .notification-detail-message {
+        font-size: 13px;
+        padding: 14px;
+    }
+
+    .notification-detail-button {
+        align-self: stretch;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .complaint-heading {
+        font-size: 28px;
+    }
+
+    .complaint-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 0;
+    }
+
+    .complaint-nav-active,
+    .complaint-nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .complaint-main {
+        padding-top: 16px;
+        gap: 12px;
+    }
+
+    .complaint-main-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .complaint-main-heading {
+        font-size: 11px;
+    }
+
+    .complaint-main-button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .complaint-table {
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-radius: 12px;
+    }
+
+    .complaint-table-header,
+    .complaint-table-row {
+        min-width: 900px;
+    }
+
+    .complaint-table-header {
+        padding: 10px;
+    }
+
+    .complaint-table-row {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .profile-heading {
+        font-size: 28px;
+    }
+
+    .profile-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 0;
+    }
+
+    .profile-nav-active,
+    .profile-nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .profile-main {
+        padding-top: 16px;
+    }
+
+    .profile-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .profile-card-heading {
+        font-size: 18px;
+    }
+
+    .profile-photo {
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .profile-photo-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .profile-fields {
+        gap: 12px;
+        padding-top: 12px;
+    }
+
+    .profile-input {
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .profile-card-footer {
+        padding-top: 12px;
+    }
+
+    .notification-settings-heading {
+        font-size: 28px;
+    }
+
+    .notification-settings-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 0;
+    }
+
+    .notification-settings-nav-active,
+    .notification-settings-nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .notification-settings-main {
+        padding-top: 16px;
+    }
+
+    .notification-settings-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .notification-settings-card-heading {
+        font-size: 18px;
+    }
+
+    .notification-settings-options {
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    .notification-settings-option {
+        gap: 10px;
+    }
+
+    .notification-settings-option-title {
+        font-size: 12px;
+    }
+
+    .notification-settings-option-description {
+        font-size: 11px;
+    }
+
+    .notification-settings-card-footer {
+        padding-top: 4px;
+    }
+
+    .notification-settings-save-button {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .data-export-heading {
+        font-size: 28px;
+    }
+    .data-export-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 0;
+    }
+    .data-export-nav-active,
+    .data-export-nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    .data-export-main {
+        padding-top: 16px;
+    }
+    .data-export-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+    .data-export-card-heading {
+        font-size: 18px;
+    }
+    .data-export-information {
+        padding-top: 12px;
+        font-size: 11px;
+    }
+    .data-export-download {
+        padding: 12px;
+        margin-top: 12px;
+    }
+    .data-export-download-description {
+        font-size: 11px;
+    }
+
+    .security-heading {
+        font-size: 28px;
+    }
+    .security-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 10px 0;
+    }
+    .security-nav-active,
+    .security-nav-link {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    .security-main {
+        padding-top: 16px;
+    }
+    .security-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+    .security-card-heading {
+        font-size: 18px;
+    }
+    .security-fields {
+        gap: 14px;
+        padding-top: 16px;
+    }
+    .security-input-wrapper {
+        height: 38px;
+    }
+    .security-card-footer {
+        padding-top: 12px;
+    }
+
+    .login-modal {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .login-modal-body {
+        padding: 14px 16px 18px;
+    }
+
+    .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .login-tabs span,
+    .login-tabs a {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .login-input {
+        min-height: 40px;
+    }
+
+    .login-input input {
+        font-size: 12px;
+    }
+
+    .login-submit {
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    .register-modal {
+        max-width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    .register-modal .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .register-modal .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .register-modal .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .register-modal-body {
+        padding: 14px;
+    }
+
+    .register-modal .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .register-modal .login-tabs a,
+    .register-modal .login-tabs span {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .register-form {
+        gap: 14px;
+    }
+
+    .register-field-row {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .register-field label {
+        font-size: 10px;
+    }
+
+    .register-input {
+        min-height: 40px;
+    }
+
+    .register-input input {
+        font-size: 12px;
+    }
+
+    .register-helper {
+        font-size: 10px;
+    }
+
+    .register-submit {
+        min-height: 40px;
+        font-size: 12px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        padding: 40px 24px;
+        gap: 32px 24px;
+    }
+
+    .footer-header {
+        flex: 1 1 100%;
+    }
+
+    .footer-body {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    .footer-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
