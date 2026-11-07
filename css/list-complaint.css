@@ -113,6 +113,7 @@
     display: grid;
     grid-template-columns: 0.8fr 3fr 1.6fr 0.9fr 1.3fr 0.6fr;
     align-items: center;
+    gap: 6px;
     background-color: var(--bg-color-body);
     border-bottom: 1px solid var(--border-color-gray);
     padding: 12px;

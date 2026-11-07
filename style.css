@@ -1223,23 +1223,33 @@ a:focus-visible {
     }
 
     .complaint-table {
+        width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
         border-radius: 12px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .complaint-table-header,
     .complaint-table-row {
         min-width: 900px;
+        grid-template-columns: 0.8fr 3fr 1.6fr 0.9fr 1.3fr 0.6fr;
     }
 
     .complaint-table-header {
+        gap: 6px;
         padding: 10px;
     }
 
     .complaint-table-row {
-        padding: 10px;
         gap: 6px;
+        padding: 10px;
+    }
+
+    .complaint-case-title,
+    .complaint-case-location,
+    .complaint-agency {
+        overflow-wrap: anywhere;
     }
 
     .profile-heading {
