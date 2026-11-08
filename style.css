@@ -125,7 +125,7 @@ a {
 body {
     margin: 0;
     background-color: var(--bg-color-body);
-    padding: 120px 0 0 0;
+    padding: 100px 0 0 0;
 }
 
 a:focus-visible {
@@ -143,6 +143,10 @@ a:focus-visible {
 
 .bold-700 {
     font-weight: 700;
+}
+
+.normal-400 {
+    font-weight: 400;
 }
 
 /* --------------------Reusable Components-------------------- */
@@ -682,6 +686,117 @@ a:focus-visible {
 
     .main {
         width: 100%;
+    }
+
+    .login-modal {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .login-modal-body {
+        padding: 14px 16px 18px;
+    }
+
+    .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .login-tabs span,
+    .login-tabs a {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .login-input {
+        min-height: 40px;
+    }
+
+    .login-input input {
+        font-size: 12px;
+    }
+
+    .login-submit {
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    .register-modal {
+        max-width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    .register-modal .login-modal-header {
+        padding: 18px 18px 14px;
+    }
+
+    .register-modal .login-modal-header h2 {
+        font-size: 19px;
+    }
+
+    .register-modal .login-modal-header p {
+        font-size: 12px;
+    }
+
+    .register-modal-body {
+        padding: 14px;
+    }
+
+    .register-modal .login-tabs {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .register-modal .login-tabs a,
+    .register-modal .login-tabs span {
+        min-height: 42px;
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .register-form {
+        gap: 14px;
+    }
+
+    .register-field-row {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .register-field label {
+        font-size: 10px;
+    }
+
+    .register-input {
+        min-height: 40px;
+    }
+
+    .register-input input {
+        font-size: 12px;
+    }
+
+    .register-helper {
+        font-size: 10px;
+    }
+
+    .register-submit {
+        min-height: 40px;
+        font-size: 12px;
     }
 
     .hero {
@@ -1433,115 +1548,144 @@ a:focus-visible {
         padding-top: 12px;
     }
 
-    .login-modal {
-        max-width: 100%;
-        border-radius: 16px;
+    .detail-report {
+        gap: 16px;
     }
 
-    .login-modal-header {
-        padding: 18px 18px 14px;
+    .detail-report-main {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .login-modal-header h2 {
-        font-size: 19px;
+    .detail-report-body,
+    .detail-report-sidebar {
+        width: 100%;
+        flex: none;
     }
 
-    .login-modal-header p {
+    .detail-report-body {
+        gap: 16px;
+    }
+
+    .detail-report-content {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .detail-report-status {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .detail-report-status-group {
+        gap: 6px;
+    }
+
+    .detail-report-status-badge {
+        padding: 6px 12px;
         font-size: 12px;
     }
 
-    .login-modal-body {
-        padding: 14px 16px 18px;
+    .detail-report-status-badge img {
+        width: 12px;
+        height: 12px;
     }
 
-    .login-tabs {
-        gap: 8px;
-        margin-bottom: 18px;
-    }
-
-    .login-tabs span,
-    .login-tabs a {
-        min-height: 42px;
-        padding: 6px;
+    .detail-report-status-time {
         font-size: 11px;
     }
 
-    .login-input {
-        min-height: 40px;
+    .detail-report-upvote {
+        padding: 7px 12px;
+        font-size: 11px;
     }
 
-    .login-input input {
-        font-size: 12px;
+    .detail-report-heading {
+        font-size: 25px;
     }
 
-    .login-submit {
-        min-height: 40px;
+    .detail-report-description {
         font-size: 13px;
     }
 
-    .register-modal {
-        max-width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-        border-radius: 16px;
+    .detail-report-pipeline {
+        padding-top: 12px;
+        gap: 10px;
     }
 
-    .register-modal .login-modal-header {
-        padding: 18px 18px 14px;
-    }
-
-    .register-modal .login-modal-header h2 {
-        font-size: 19px;
-    }
-
-    .register-modal .login-modal-header p {
-        font-size: 12px;
-    }
-
-    .register-modal-body {
-        padding: 14px;
-    }
-
-    .register-modal .login-tabs {
+    .detail-report-pipeline-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
-        margin-bottom: 18px;
     }
 
-    .register-modal .login-tabs a,
-    .register-modal .login-tabs span {
-        min-height: 42px;
-        padding: 6px;
+    .detail-report-pipeline-step {
+        min-height: 48px;
+        padding: 8px;
+    }
+
+    .detail-report-pipeline-name {
+        font-size: 10px;
+    }
+
+    .detail-report-evidence,
+    .detail-report-history {
+        gap: 10px;
+    }
+
+    .detail-report-section-heading {
+        font-size: 17px;
+    }
+
+    .detail-report-section-description {
         font-size: 11px;
     }
 
-    .register-form {
+    .detail-report-evidence-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .detail-report-evidence-image,
+    .detail-report-audio {
+        height: 180px;
+    }
+
+    .detail-report-timeline {
         gap: 14px;
     }
 
-    .register-field-row {
-        flex-direction: column;
+    .detail-report-timeline-heading {
+        gap: 6px;
+    }
+
+    .detail-report-timeline-heading h3 {
+        font-size: 11px;
+    }
+
+    .detail-report-timeline-description {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .detail-report-sidebar {
+        padding: 16px;
+    }
+
+    .detail-report-sidebar-content {
         gap: 14px;
     }
 
-    .register-field label {
-        font-size: 10px;
+    .detail-report-sidebar-code {
+        font-size: 19px;
     }
 
-    .register-input {
-        min-height: 40px;
-    }
-
-    .register-input input {
+    .detail-report-sidebar-value {
         font-size: 12px;
     }
 
-    .register-helper {
-        font-size: 10px;
-    }
-
-    .register-submit {
-        min-height: 40px;
-        font-size: 12px;
+    .detail-report-sidebar-button {
+        padding: 10px;
+        font-size: 11px;
     }
 
     .footer {
