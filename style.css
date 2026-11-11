@@ -125,7 +125,7 @@ a {
 body {
     margin: 0;
     background-color: var(--bg-color-body);
-    padding: 100px 0 0 0;
+    padding-top: 100px;
 }
 
 a:focus-visible {
@@ -360,6 +360,10 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.nav > .nav-brand > .nav-hamburger {
+    display: none;
 }
 
 .nav > .nav-pages {
@@ -674,14 +678,34 @@ a:focus-visible {
         padding: 15px 24px;
     }
 
+    .nav > .nav-brand {
+        display: flex;
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .nav > .nav-brand > .nav-hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
     .nav > .nav-pages {
+        display: none;
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
+    .nav > .nav-button {
+        display: none;
+    }
+
+    .nav > .nav-collapsible.nav-show {
+        display: flex;
+    }
+
     body {
-        padding-top: 180px;
+        padding-top: 100px;
     }
 
     .main {
