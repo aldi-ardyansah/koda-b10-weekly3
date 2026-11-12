@@ -19,3 +19,47 @@ window.addEventListener("scroll", (event) => {
         element.classList.remove("nav-show");
     });
 });
+
+// Login Modal Page
+fetch("login.html")
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML("afterbegin", data);
+
+        const loginToggle = document.getElementById("login-toggle");
+        const loginButton = document.querySelector(".button-transparent");
+        const registerButton = document.querySelector(".login-modal .login-tab-inactive");
+
+        loginToggle.checked = false;
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            loginToggle.checked = true;
+        });
+
+        registerButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            loginToggle.checked = false;
+            document.getElementById("register-toggle").checked = true;
+        });
+    })
+    .catch(error => console.error("Error loading login form:", error));
+
+// Register Modal Page
+fetch("register.html")
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML("afterbegin", data);
+
+        const registerToggle = document.getElementById("register-toggle");
+        const loginTab = document.querySelector(".register-modal .login-tab-inactive");
+
+        registerToggle.checked = false;
+
+        loginTab.addEventListener("click", (e) => {
+            e.preventDefault();
+            registerToggle.checked = false;
+            document.getElementById("login-toggle").checked = true;
+        });
+    })
+    .catch(error => console.error("Error loading register form:", error));
