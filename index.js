@@ -42,6 +42,20 @@ fetch("login.html")
             loginToggle.checked = false;
             document.getElementById("register-toggle").checked = true;
         });
+
+        // Login Password Eye Icon Toggle
+        const loginPassword = document.getElementById("login-password");
+        const loginEye = document.querySelector(".login-eye");
+
+        loginEye.addEventListener("click", () => {
+            if (loginPassword.type === "password") {
+                loginPassword.type = "text";
+                loginEye.src = "icons/i-eye-closed.svg";
+            } else {
+                loginPassword.type = "password";
+                loginEye.src = "icons/i-eye.svg";
+            }
+        });
     })
     .catch(error => console.error("Error loading login form:", error));
 
@@ -60,6 +74,20 @@ fetch("register.html")
             e.preventDefault();
             registerToggle.checked = false;
             document.getElementById("login-toggle").checked = true;
+        });
+
+        // Register Password Eye Icon Toggle
+        const registerPassword = document.getElementById("register-password");
+        const registerEye = document.querySelector(".register-modal .login-eye");
+
+        registerEye.addEventListener("click", () => {
+            if (registerPassword.type === "password") {
+                registerPassword.type = "text";
+                registerEye.src = "icons/i-eye-closed.svg";
+            } else {
+                registerPassword.type = "password";
+                registerEye.src = "icons/i-eye.svg";
+            }
         });
     })
     .catch(error => console.error("Error loading register form:", error));
