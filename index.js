@@ -96,15 +96,17 @@ fetch("register.html")
 const buttonUser = document.querySelector(".button-user");
 const userDropdown = document.querySelector(".user-dropdown");
 
-buttonUser.addEventListener("click", () => {
-    userDropdown.classList.toggle("active");
-});
+if (buttonUser && userDropdown) {
+    buttonUser.addEventListener("click", () => {
+        userDropdown.classList.toggle("active");
+    });
 
-document.addEventListener("click", (e) => {
-    if (!buttonUser.contains(e.target) && !userDropdown.contains(e.target)) {
-        userDropdown.classList.remove("active");
-    }
-});
+    document.addEventListener("click", (e) => {
+        if (!buttonUser.contains(e.target) && !userDropdown.contains(e.target)) {
+            userDropdown.classList.remove("active");
+        }
+    });
+}
 
 // Security Page Password Toggle
 const securityPasswordFields = document.querySelectorAll(".security-field");
@@ -126,3 +128,58 @@ securityPasswordFields.forEach((field) => {
         }
     });
 });
+
+// Live Feed Filters
+const liveFeedSearch = document.querySelector(".input-search input");
+const liveFeedCategory = document.querySelectorAll('input[name="category"]');
+const liveFeedStatus = document.querySelectorAll('input[name="status"]');
+const liveFeedProof = document.querySelector(".proof input");
+const liveFeedArticles = document.querySelectorAll(".articles-live-feed");
+
+function getFilterLabel(input) {
+    const label = input.closest("label").cloneNode(true);
+    label.querySelectorAll("img").forEach((img) => img.remove());
+    return label.textContent.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function filterLiveFeed() {
+    const searchValue = liveFeedSearch.value.trim().toLowerCase();
+
+    const selectedCategory = document.querySelector('input[name="category"]:checked');
+    const categoryValue = getFilterLabel(selectedCategory);
+
+    const selectedStatus = document.querySelector('input[name="status"]:checked');
+    const statusValue = getFilterLabel(selectedStatus);
+
+    const proofOnly = liveFeedProof.checked;
+
+    liveFeedArticles.forEach((article) => {
+        const articleText = article.textContent.toLowerCase();
+        const articleCategory = article.querySelector(".articles-location span:last-child").textContent.trim().toLowerCase();
+        const articleStatus = article.querySelector(".articles-status").textContent.trim().toLowerCase();
+        const hasProof = article.querySelector(".articles-proof") !== null;
+
+        const matchesSearch = articleText.includes(searchValue);
+        const matchesCategory = categoryValue.startsWith("all issues") || articleCategory === categoryValue;
+        const matchesStatus = statusValue === "all" || articleStatus === statusValue;
+        const matchesProof = !proofOnly || hasProof;
+
+        article.style.display = matchesSearch && matchesCategory && matchesStatus && matchesProof ? "" : "none";
+    });
+}
+
+// Search
+liveFeedSearch.addEventListener("input", filterLiveFeed);
+
+// Issues
+liveFeedCategory.forEach((category) => {
+    category.addEventListener("change", filterLiveFeed);
+});
+
+// Status
+liveFeedStatus.forEach((status) => {
+    status.addEventListener("change", filterLiveFeed);
+});
+
+// With photos/proof only
+liveFeedProof.addEventListener("change", filterLiveFeed);
