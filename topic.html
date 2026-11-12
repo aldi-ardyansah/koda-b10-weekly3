@@ -72,7 +72,8 @@
                     <span class="report-fixing-subheading public-sans">Select the municipal service category that best matches the issue observed.</span>
                 </div>
                 <div class="report-fixing-main">
-                    <div class="report-fixing-card">
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="roads-transit">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-warning-green.svg" alt="Icon Warning">
                             Roads & Transit
@@ -80,8 +81,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Pothole / Sidewalk (Trotoar)</span>
                         <p class="public-sans report-fixing-card-text">Potholes, broken sidewalk slabs, damaged drainage grates</p>
-                    </div>
-                    <div class="report-fixing-card">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="water-sewage">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-water-green.svg" alt="Icon Water">
                             Water & Sewage
@@ -89,8 +91,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Water Burst / Pipa Bocor</span>
                         <p class="public-sans report-fixing-card-text">Pipeline bursts, flooding tap leaks, dry taps</p>
-                    </div>
-                    <div class="report-fixing-card">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="street-lighting">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-lighting-green.svg" alt="Icon Lighting">
                             Street Lighting
@@ -98,8 +101,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Dark Street / PJU Padam</span>
                         <p class="public-sans report-fixing-card-text">Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
-                    </div>
-                    <div class="report-fixing-card">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="sanitation-waste">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-trashbin-green.svg" alt="Icon Trashbin">
                             Sanitation & Waste
@@ -107,8 +111,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Trash Pile / Sampah Liar</span>
                         <p class="public-sans report-fixing-card-text">Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
-                    </div>
-                    <div class="report-fixing-card report-fixing-card-selected">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="public-parks-trees">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-tree-green.svg" alt="Icon Tree">
                             Public Parks & Trees
@@ -116,8 +121,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Hazardous Tree / Rawan Tumbang</span>
                         <p class="public-sans report-fixing-card-text">Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
-                    </div>
-                    <div class="report-fixing-card">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="noise-disturbance">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-speaker-green.svg" alt="Icon Speaker">
                             Noise & Disturbance
@@ -125,8 +131,9 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Late-night Noise / Ketertiban</span>
                         <p class="public-sans report-fixing-card-text">Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
-                    </div>
-                    <div class="report-fixing-card">
+                    </label>
+                    <label class="report-fixing-card">
+                        <input type="radio" name="report-category" value="building-zoning">
                         <div class="public-sans report-fixing-card-heading">
                             <img src="icons/i-building-green.svg" alt="Icon Building">
                             Building & Zoning
@@ -134,7 +141,7 @@
                         </div>
                         <span class="public-sans report-fixing-card-subheading">Unsafe Construction / Bangunan</span>
                         <p class="public-sans report-fixing-card-text">Unsafe scaffolding, structural hazards, building boundary violations</p>
-                    </div>
+                    </label>
                 </div>
                 <div class="report-fixing-footer">
                     <a class="report-fixing-footer-cancel public-sans" href="live-feed.html">Cancel</a>

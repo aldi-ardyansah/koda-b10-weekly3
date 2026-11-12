@@ -158,6 +158,8 @@
     border-radius: 12px;
     padding: 12px;
     gap: 12px;
+    position: relative;
+    cursor: pointer;
 }
 
 .report-fixing-card-heading {
@@ -193,6 +195,16 @@
 }
 
 .report-fixing-card-selected {
+    background-color: var(--bg-color-green-light);
+    border: 1px solid var(--border-color-green);
+}
+
+.report-fixing-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.report-fixing-card:has(input:checked) {
     background-color: var(--bg-color-green-light);
     border: 1px solid var(--border-color-green);
 }

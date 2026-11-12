@@ -105,3 +105,24 @@ document.addEventListener("click", (e) => {
         userDropdown.classList.remove("active");
     }
 });
+
+// Security Page Password Toggle
+const securityPasswordFields = document.querySelectorAll(".security-field");
+
+securityPasswordFields.forEach((field) => {
+    const securityPassword = field.querySelector(".security-input");
+    const securityEye = field.querySelector(".security-toggle-password img");
+    const securityToggle = field.querySelector(".security-toggle-password");
+
+    securityToggle.addEventListener("click", () => {
+        if (securityPassword.type === "password") {
+            securityPassword.type = "text";
+            securityEye.src = "icons/i-eye-closed.svg";
+            securityToggle.setAttribute("aria-label", "Hide password");
+        } else {
+            securityPassword.type = "password";
+            securityEye.src = "icons/i-eye.svg";
+            securityToggle.setAttribute("aria-label", "Show password");
+        }
+    });
+});
