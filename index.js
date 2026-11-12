@@ -1,6 +1,6 @@
+// Showing nav menu when click on hamburger icon
 const hamburger = document.querySelector(".nav-hamburger");
 
-// Showing nav menu when click on hamburger icon
 hamburger.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -63,3 +63,17 @@ fetch("register.html")
         });
     })
     .catch(error => console.error("Error loading register form:", error));
+
+// User Dropdown
+const buttonUser = document.querySelector(".button-user");
+const userDropdown = document.querySelector(".user-dropdown");
+
+buttonUser.addEventListener("click", () => {
+    userDropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+    if (!buttonUser.contains(e.target) && !userDropdown.contains(e.target)) {
+        userDropdown.classList.remove("active");
+    }
+});

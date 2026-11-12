@@ -906,6 +906,87 @@ a:focus-visible {
     cursor: pointer;
 }
 
+.button-user-container {
+    position: relative;
+}
+
+.button-user {
+    cursor: pointer;
+}
+
+/* --------------------User Dropdown-------------------- */
+.button-user-container {
+    position: relative;
+}
+
+.button-user {
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 240px;
+    padding: 6px;
+    background-color: var(--bg-color-white);
+    border: 1px solid var(--border-color-gray);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    display: none;
+    z-index: 1000;
+}
+
+.user-dropdown.active {
+    display: block;
+}
+
+.user-dropdown-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color-gray);
+}
+
+.user-dropdown-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(26, 43, 35, 1);
+}
+
+.user-dropdown-email {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(139, 153, 144, 1);
+}
+
+.user-dropdown-link,
+.user-dropdown-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color-gray);
+}
+
+.user-dropdown-link {
+    color: rgba(76, 91, 81, 1);
+}
+
+.user-dropdown-logout {
+    color: var(--font-color-red);
+    border-bottom: none;
+}
+
+.user-dropdown-link span,
+.user-dropdown-logout span {
+    font-size: 12px;
+}
+
 /* --------------------Footer-------------------- */
 .footer {
     display: flex;
