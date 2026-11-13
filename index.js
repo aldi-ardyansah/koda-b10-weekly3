@@ -20,6 +20,23 @@ window.addEventListener("scroll", (event) => {
     });
 });
 
+// Login Authentication
+const protectedPages = [
+    "topic.html",
+    "location.html",
+    "proof.html",
+    "review.html",
+    "receipt.html",
+    "notification.html",
+    "list-complaint.html",
+    "profile.html",
+    "notification-settings.html",
+    "data-export.html",
+    "security.html"
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
 // Login Modal Page
 fetch("login.html")
     .then(response => response.text())
@@ -30,22 +47,26 @@ fetch("login.html")
         const loginButton = document.querySelector(".button-transparent");
         const registerButton = document.querySelector(".login-modal .login-tab-inactive");
 
-        loginToggle.checked = false;
+        loginToggle.checked = protectedPages.includes(currentPage) && sessionStorage.getItem("isLoggedIn") !== "true";
 
-        loginButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            loginToggle.checked = true;
-        });
+        if (loginButton) {
+            loginButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                loginToggle.checked = true;
+            });
+        }
 
-        registerButton.addEventListener("click", (e) => {
-            e.preventDefault();
-            loginToggle.checked = false;
-            document.getElementById("register-toggle").checked = true;
-        });
+        if (registerButton) {
+            registerButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                loginToggle.checked = false;
+                document.getElementById("register-toggle").checked = true;
+            });
+        }
 
         // Login Password Eye Icon Toggle
         const loginPassword = document.getElementById("login-password");
-        const loginEye = document.querySelector(".login-eye");
+        const loginEye = document.querySelector(".login-modal .login-eye");
 
         loginEye.addEventListener("click", () => {
             if (loginPassword.type === "password") {
@@ -56,8 +77,56 @@ fetch("login.html")
                 loginEye.src = "icons/i-eye.svg";
             }
         });
+
+        // Login Validation
+        const loginForm = document.querySelector(".login-modal .login-form");
+
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+
+            if (email === "admin@mail.com" && password === "1234") {
+                sessionStorage.setItem("isLoggedIn", "true");
+                window.location.replace("list-complaint.html");
+            } else {
+                alert("Email atau password salah!");
+            }
+        });
     })
     .catch(error => console.error("Error loading login form:", error));
+
+// Logout
+const logoutButton = document.querySelector(".user-dropdown-logout");
+
+if (logoutButton) {
+    logoutButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem("isLoggedIn");
+        window.location.replace("index.html");
+    });
+}
+
+// Button Report Authentication
+// Button Report Authentication
+const buttonReports = document.querySelectorAll(".button-report");
+
+buttonReports.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (sessionStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = "topic.html";
+        } else {
+            const loginToggle = document.getElementById("login-toggle");
+
+            if (loginToggle) {
+                loginToggle.checked = true;
+            }
+        }
+    });
+});
 
 // Register Modal Page
 fetch("register.html")
