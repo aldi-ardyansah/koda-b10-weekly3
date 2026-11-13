@@ -1,254 +1,226 @@
-// Showing nav menu when click on hamburger icon
-const hamburger = document.querySelector(".nav-hamburger");
+$(document).ready(function() {
 
-hamburger.addEventListener("click", (e) => {
-    e.preventDefault();
+    // Showing nav menu when click on hamburger icon
+    $(".nav-hamburger").on("click", function(e) {
+        e.preventDefault();
 
-    const navCollapsible = document.querySelectorAll(".nav-collapsible");
-
-    navCollapsible.forEach(element => {
-        element.classList.toggle("nav-show");
+        $(".nav-collapsible").toggleClass("nav-show");
     });
-});
 
-// Hiding nav menu when scrolling page
-window.addEventListener("scroll", (event) => {
-    const navCollapsible = document.querySelectorAll(".nav-collapsible");
-
-    navCollapsible.forEach(element => {
-        element.classList.remove("nav-show");
+    // Hiding nav menu when scrolling page
+    $(window).on("scroll", function() {
+        $(".nav-collapsible").removeClass("nav-show");
     });
-});
 
-// Login Authentication
-const protectedPages = [
-    "topic.html",
-    "location.html",
-    "proof.html",
-    "review.html",
-    "receipt.html",
-    "notification.html",
-    "list-complaint.html",
-    "profile.html",
-    "notification-settings.html",
-    "data-export.html",
-    "security.html"
-];
+    // Login Authentication
+    const protectedPages = [
+        "topic.html",
+        "location.html",
+        "proof.html",
+        "review.html",
+        "receipt.html",
+        "notification.html",
+        "list-complaint.html",
+        "profile.html",
+        "notification-settings.html",
+        "data-export.html",
+        "security.html"
+    ];
 
-const currentPage = window.location.pathname.split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop();
 
-// Login Modal Page
-fetch("login.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML("afterbegin", data);
+    let loginDestination = "list-complaint.html";
 
-        const loginToggle = document.getElementById("login-toggle");
-        const loginButton = document.querySelector(".button-transparent");
-        const registerButton = document.querySelector(".login-modal .login-tab-inactive");
+    // Login Modal Page
+    $.get("login.html", function(data) {
+        $("body").prepend(data);
 
-        loginToggle.checked = protectedPages.includes(currentPage) && sessionStorage.getItem("isLoggedIn") !== "true";
+        const $loginToggle = $("#login-toggle");
+        const $loginButton = $(".button-transparent");
+        const $registerButton = $(".login-modal .login-tab-inactive");
 
-        if (loginButton) {
-            loginButton.addEventListener("click", (e) => {
-                e.preventDefault();
-                loginToggle.checked = true;
-            });
-        }
+        $loginToggle.prop("checked", protectedPages.includes(currentPage) && sessionStorage.getItem("isLoggedIn") !== "true");
 
-        if (registerButton) {
-            registerButton.addEventListener("click", (e) => {
-                e.preventDefault();
-                loginToggle.checked = false;
-                document.getElementById("register-toggle").checked = true;
-            });
-        }
+        // Button Login
+        $loginButton.on("click", function(e) {
+            e.preventDefault();
+            loginDestination = "list-complaint.html";
+            $loginToggle.prop("checked", true);
+        });
+
+        // Button Register
+        $registerButton.on("click", function(e) {
+            e.preventDefault();
+            $loginToggle.prop("checked", false);
+            $("#register-toggle").prop("checked", true);
+        });
 
         // Login Password Eye Icon Toggle
-        const loginPassword = document.getElementById("login-password");
-        const loginEye = document.querySelector(".login-modal .login-eye");
+        $(".login-modal .login-eye").on("click", function() {
+            const $loginPassword = $("#login-password");
 
-        loginEye.addEventListener("click", () => {
-            if (loginPassword.type === "password") {
-                loginPassword.type = "text";
-                loginEye.src = "icons/i-eye-closed.svg";
+            if ($loginPassword.attr("type") === "password") {
+                $loginPassword.attr("type", "text");
+                $(this).attr("src", "icons/i-eye-closed.svg");
             } else {
-                loginPassword.type = "password";
-                loginEye.src = "icons/i-eye.svg";
+                $loginPassword.attr("type", "password");
+                $(this).attr("src", "icons/i-eye.svg");
             }
         });
 
         // Login Validation
-        const loginForm = document.querySelector(".login-modal .login-form");
-
-        loginForm.addEventListener("submit", (e) => {
+        $(".login-modal .login-form").on("submit", function(e) {
             e.preventDefault();
 
-            const email = document.getElementById("login-email").value;
-            const password = document.getElementById("login-password").value;
+            const email = $("#login-email").val();
+            const password = $("#login-password").val();
 
             if (email === "admin@mail.com" && password === "1234") {
                 sessionStorage.setItem("isLoggedIn", "true");
-                window.location.replace("list-complaint.html");
+                window.location.replace(loginDestination);
             } else {
                 alert("Email atau password salah!");
             }
         });
-    })
-    .catch(error => console.error("Error loading login form:", error));
 
-// Logout
-const logoutButton = document.querySelector(".user-dropdown-logout");
+        // Button Report Authentication
+        $(".button-report").on("click", function(e) {
+            e.preventDefault();
 
-if (logoutButton) {
-    logoutButton.addEventListener("click", (e) => {
+            if (sessionStorage.getItem("isLoggedIn") === "true") {
+                window.location.href = "topic.html";
+            } else {
+                loginDestination = "topic.html";
+                $loginToggle.prop("checked", true);
+            }
+        });
+
+    }).fail(function(error) {
+        console.error("Error loading login form:", error);
+    });
+
+    // Logout
+    $(document).on("click", ".user-dropdown-logout", function(e) {
         e.preventDefault();
+
         sessionStorage.removeItem("isLoggedIn");
         window.location.replace("index.html");
     });
-}
 
-// Button Report Authentication
-// Button Report Authentication
-const buttonReports = document.querySelectorAll(".button-report");
+    // Register Modal Page
+    $.get("register.html", function(data) {
+        $("body").prepend(data);
 
-buttonReports.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
+        const $registerToggle = $("#register-toggle");
+        const $loginTab = $(".register-modal .login-tab-inactive");
 
-        if (sessionStorage.getItem("isLoggedIn") === "true") {
-            window.location.href = "topic.html";
-        } else {
-            const loginToggle = document.getElementById("login-toggle");
+        $registerToggle.prop("checked", false);
 
-            if (loginToggle) {
-                loginToggle.checked = true;
-            }
-        }
-    });
-});
-
-// Register Modal Page
-fetch("register.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML("afterbegin", data);
-
-        const registerToggle = document.getElementById("register-toggle");
-        const loginTab = document.querySelector(".register-modal .login-tab-inactive");
-
-        registerToggle.checked = false;
-
-        loginTab.addEventListener("click", (e) => {
+        // Login Tab
+        $loginTab.on("click", function(e) {
             e.preventDefault();
-            registerToggle.checked = false;
-            document.getElementById("login-toggle").checked = true;
+
+            $registerToggle.prop("checked", false);
+            $("#login-toggle").prop("checked", true);
         });
 
         // Register Password Eye Icon Toggle
-        const registerPassword = document.getElementById("register-password");
-        const registerEye = document.querySelector(".register-modal .login-eye");
+        $(".register-modal .login-eye").on("click", function() {
+            const $registerPassword = $("#register-password");
 
-        registerEye.addEventListener("click", () => {
-            if (registerPassword.type === "password") {
-                registerPassword.type = "text";
-                registerEye.src = "icons/i-eye-closed.svg";
+            if ($registerPassword.attr("type") === "password") {
+                $registerPassword.attr("type", "text");
+                $(this).attr("src", "icons/i-eye-closed.svg");
             } else {
-                registerPassword.type = "password";
-                registerEye.src = "icons/i-eye.svg";
+                $registerPassword.attr("type", "password");
+                $(this).attr("src", "icons/i-eye.svg");
             }
         });
-    })
-    .catch(error => console.error("Error loading register form:", error));
 
-// User Dropdown
-const buttonUser = document.querySelector(".button-user");
-const userDropdown = document.querySelector(".user-dropdown");
-
-if (buttonUser && userDropdown) {
-    buttonUser.addEventListener("click", () => {
-        userDropdown.classList.toggle("active");
+    }).fail(function(error) {
+        console.error("Error loading register form:", error);
     });
 
-    document.addEventListener("click", (e) => {
-        if (!buttonUser.contains(e.target) && !userDropdown.contains(e.target)) {
-            userDropdown.classList.remove("active");
+    // User Dropdown
+    $(".button-user").on("click", function() {
+        $(".user-dropdown").toggleClass("active");
+    });
+
+    $(document).on("click", function(e) {
+        if (!$(e.target).closest(".button-user, .user-dropdown").length) {
+            $(".user-dropdown").removeClass("active");
         }
     });
-}
 
-// Security Page Password Toggle
-const securityPasswordFields = document.querySelectorAll(".security-field");
+    // Security Page Password Toggle
+    $(".security-field").each(function() {
+        const $field = $(this);
+        const $securityPassword = $field.find(".security-input");
+        const $securityEye = $field.find(".security-toggle-password img");
+        const $securityToggle = $field.find(".security-toggle-password");
 
-securityPasswordFields.forEach((field) => {
-    const securityPassword = field.querySelector(".security-input");
-    const securityEye = field.querySelector(".security-toggle-password img");
-    const securityToggle = field.querySelector(".security-toggle-password");
-
-    securityToggle.addEventListener("click", () => {
-        if (securityPassword.type === "password") {
-            securityPassword.type = "text";
-            securityEye.src = "icons/i-eye-closed.svg";
-            securityToggle.setAttribute("aria-label", "Hide password");
-        } else {
-            securityPassword.type = "password";
-            securityEye.src = "icons/i-eye.svg";
-            securityToggle.setAttribute("aria-label", "Show password");
-        }
+        $securityToggle.on("click", function() {
+            if ($securityPassword.attr("type") === "password") {
+                $securityPassword.attr("type", "text");
+                $securityEye.attr("src", "icons/i-eye-closed.svg");
+                $securityToggle.attr("aria-label", "Hide password");
+            } else {
+                $securityPassword.attr("type", "password");
+                $securityEye.attr("src", "icons/i-eye.svg");
+                $securityToggle.attr("aria-label", "Show password");
+            }
+        });
     });
+
+    // Live Feed Filters
+    const $liveFeedSearch = $(".input-search input");
+    const $liveFeedCategory = $('input[name="category"]');
+    const $liveFeedStatus = $('input[name="status"]');
+    const $liveFeedProof = $(".proof input");
+    const $liveFeedArticles = $(".articles-live-feed");
+
+    function getFilterLabel(input) {
+        return $(input).closest("label").clone().find("img").remove().end().text().trim().toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function filterLiveFeed() {
+        const searchValue = $liveFeedSearch.val().trim().toLowerCase();
+
+        const selectedCategory = $('input[name="category"]:checked')[0];
+        const categoryValue = getFilterLabel(selectedCategory);
+
+        const selectedStatus = $('input[name="status"]:checked')[0];
+        const statusValue = getFilterLabel(selectedStatus);
+
+        const proofOnly = $liveFeedProof.prop("checked");
+
+        $liveFeedArticles.each(function() {
+            const $article = $(this);
+
+            const articleText = $article.text().toLowerCase();
+            const articleCategory = $article.find(".articles-location span:last-child").text().trim().toLowerCase();
+            const articleStatus = $article.find(".articles-status").text().trim().toLowerCase();
+            const hasProof = $article.find(".articles-proof").length > 0;
+
+            const matchesSearch = articleText.includes(searchValue);
+            const matchesCategory = categoryValue.startsWith("all issues") || articleCategory === categoryValue;
+            const matchesStatus = statusValue === "all" || articleStatus === statusValue;
+            const matchesProof = !proofOnly || hasProof;
+
+            $article.toggle(matchesSearch && matchesCategory && matchesStatus && matchesProof);
+        });
+    }
+
+    // Search
+    $liveFeedSearch.on("input", filterLiveFeed);
+
+    // Issues
+    $liveFeedCategory.on("change", filterLiveFeed);
+
+    // Status
+    $liveFeedStatus.on("change", filterLiveFeed);
+
+    // With photos/proof only
+    $liveFeedProof.on("change", filterLiveFeed);
+
 });
-
-// Live Feed Filters
-const liveFeedSearch = document.querySelector(".input-search input");
-const liveFeedCategory = document.querySelectorAll('input[name="category"]');
-const liveFeedStatus = document.querySelectorAll('input[name="status"]');
-const liveFeedProof = document.querySelector(".proof input");
-const liveFeedArticles = document.querySelectorAll(".articles-live-feed");
-
-function getFilterLabel(input) {
-    const label = input.closest("label").cloneNode(true);
-    label.querySelectorAll("img").forEach((img) => img.remove());
-    return label.textContent.trim().toLowerCase().replace(/\s+/g, " ");
-}
-
-function filterLiveFeed() {
-    const searchValue = liveFeedSearch.value.trim().toLowerCase();
-
-    const selectedCategory = document.querySelector('input[name="category"]:checked');
-    const categoryValue = getFilterLabel(selectedCategory);
-
-    const selectedStatus = document.querySelector('input[name="status"]:checked');
-    const statusValue = getFilterLabel(selectedStatus);
-
-    const proofOnly = liveFeedProof.checked;
-
-    liveFeedArticles.forEach((article) => {
-        const articleText = article.textContent.toLowerCase();
-        const articleCategory = article.querySelector(".articles-location span:last-child").textContent.trim().toLowerCase();
-        const articleStatus = article.querySelector(".articles-status").textContent.trim().toLowerCase();
-        const hasProof = article.querySelector(".articles-proof") !== null;
-
-        const matchesSearch = articleText.includes(searchValue);
-        const matchesCategory = categoryValue.startsWith("all issues") || articleCategory === categoryValue;
-        const matchesStatus = statusValue === "all" || articleStatus === statusValue;
-        const matchesProof = !proofOnly || hasProof;
-
-        article.style.display = matchesSearch && matchesCategory && matchesStatus && matchesProof ? "" : "none";
-    });
-}
-
-// Search
-liveFeedSearch.addEventListener("input", filterLiveFeed);
-
-// Issues
-liveFeedCategory.forEach((category) => {
-    category.addEventListener("change", filterLiveFeed);
-});
-
-// Status
-liveFeedStatus.forEach((status) => {
-    status.addEventListener("change", filterLiveFeed);
-});
-
-// With photos/proof only
-liveFeedProof.addEventListener("change", filterLiveFeed);
