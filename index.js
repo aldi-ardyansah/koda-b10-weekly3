@@ -75,11 +75,11 @@ $(document).ready(function() {
             const email = $("#login-email").val();
             const password = $("#login-password").val();
 
-            if (email === "admin@mail.com" && password === "1234") {
+            if (email === "user@mail.com" && password === "1234") {
                 sessionStorage.setItem("isLoggedIn", "true");
                 window.location.replace(loginDestination);
             } else {
-                alert("Email atau password salah!");
+                alert("Wrong email or password!");
             }
         });
 
@@ -91,6 +91,18 @@ $(document).ready(function() {
                 window.location.href = "topic.html";
             } else {
                 loginDestination = "topic.html";
+                $loginToggle.prop("checked", true);
+            }
+        });
+
+        // Button List Complaint Authentication
+        $(".button-list-complaint").on("click", function(e) {
+            e.preventDefault();
+
+            if (sessionStorage.getItem("isLoggedIn") === "true") {
+                window.location.href = "list-complaint.html";
+            } else {
+                loginDestination = "list-complaint.html";
                 $loginToggle.prop("checked", true);
             }
         });
